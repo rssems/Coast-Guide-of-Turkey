@@ -1665,7 +1665,11 @@ footer .language {
       -moz-transition: All 0.4s ease;
       -o-transition: All 0.4s ease;
       -ms-transition: All 0.4s ease;
-      transition: All 0.4s ease; }
+      transition: All 0.4s ease;
+      -webkit-background-size: 15px 15px;
+      -moz-background-size: 15px 15px;
+      -o-background-size: 15px 15px;
+      background-size: 15px 15px; }
       @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 144dpi) {
         /* line 68, ../scss/help/_mixins.scss */
         .scrollPopup .close span {
@@ -1674,16 +1678,16 @@ footer .language {
           -moz-background-size: 15px 15px;
           -o-background-size: 15px 15px;
           background-size: 15px 15px; } }
-    /* line 42, ../scss/modules/_ad.scss */
+    /* line 46, ../scss/modules/_ad.scss */
     .scrollPopup .close:hover {
       opacity: 1; }
-  /* line 46, ../scss/modules/_ad.scss */
+  /* line 50, ../scss/modules/_ad.scss */
   .scrollPopup .scrollPopup-Content {
     width: 350px;
     height: 250px;
     display: block;
     z-index: 1; }
-    /* line 51, ../scss/modules/_ad.scss */
+    /* line 55, ../scss/modules/_ad.scss */
     .scrollPopup .scrollPopup-Content a {
       display: block; }
 

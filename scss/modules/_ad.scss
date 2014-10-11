@@ -37,6 +37,10 @@
 			width: 15px;
 			height: 15px;
 			@include transition;
+			-webkit-background-size: 15px 15px;
+			-moz-background-size: 15px 15px;
+			-o-background-size: 15px 15px;
+			background-size: 15px 15px;
 		}
 		opacity: 0.5;
 		&:hover{
