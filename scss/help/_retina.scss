@@ -1,0 +1,19 @@
+// Source: https://github.com/AdamBrodzinski/Retina-Sprites-for-Compass/tree/release-2.0?codekitCB=416315261.383959 
+
+@import "retina/retina";
+@import "retina/sprite";
+@import "retina/background";
+
+
+// USAGE
+// .icon-compass-logo {
+//   @include retina-sprite(compass-logo);
+// }
+
+// .myActiveButton {
+//     @include retina-sprite(signIn, buttons);
+// }
+
+// .myHoverActiveButton {
+//     @include retina-sprite(signIn, buttons, $hover: true, $active: true);
+// }

@@ -1,0 +1,71 @@
+
+// lets expand
+.expand{
+	 .facilities-item:after,
+	 > a:after {
+		// top: auto;
+		bottom: -11px;
+		border: solid transparent;
+		content: " ";
+		height: 0;
+		width: 0;
+		position: absolute;
+		pointer-events: none;
+		border-bottom-color: #92a0ab;
+		border-width: 25px;
+		left: 50%;
+		margin: -7px 0 0 -25px;
+		}
+}
+.expanded {
+	position: absolute;
+	background: #92a0ab;
+	top: auto;
+	left: 0;
+	width: 100%;
+	text-align: left;
+	height: auto;
+	overflow: hidden;
+	z-index: 10;
+	margin-top: 10px;
+	padding: 2% 0;
+	color: #fff;
+	font-size: 18px;
+	a{
+		color: #fff;
+		&:hover{
+			text-decoration: underline;
+		}
+	}
+	h4{
+		color: #fff!important;
+	}
+	.col-2-3{
+		color: #e4ebf0;
+		margin-bottom: 20px;
+	}
+	.col-1-3{
+		font-weight: bold;
+		margin-bottom: 20px;
+	}
+	.grid{
+		position: relative;
+	}
+	span.close{
+		opacity: 0.5;
+		cursor: pointer;
+		display: block;
+		position: absolute;
+		top: 20px;
+		right: 20px;
+		@include background-image-retina('btn_close', 'png', 26px, 26px);
+		background-repeat:no-repeat;
+		width: 26px;
+		height: 26px;
+		@include transition;
+		&:hover{
+			opacity: 1;
+		}
+	}
+}
+

@@ -1,0 +1,33 @@
+section.search_result{
+	width: 100%;
+	padding:2% 0;
+	.category{
+		display: block;
+		height: 22px;
+		background-color: #2fb16d;
+		color: #fff;
+		font-size: 11px;
+		font-weight: bold;
+		line-height: 22px;
+		width: 70%;
+		padding-left: 20%;
+		margin-right: 30%;
+	}
+	.name{
+		color: #333;
+		font-size: 18px;
+		padding-bottom: 20px;
+		border-bottom:1px solid #dde2e5;
+		margin-bottom: 15px;
+		line-height: 36px;
+		margin-top: -5px;
+	}
+	li {
+		a{
+			display: block;
+			&:hover .name{
+				color: #0f85c1;
+			}
+		}
+	}
+}

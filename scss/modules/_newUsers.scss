@@ -1,0 +1,148 @@
+section.newUsers{
+	width: 100%;
+	background-color: #fff;
+	padding:8% 0;
+
+	h4{
+		color: #152937;
+		font-size: 36px;
+		margin-bottom: 35px;
+		text-align: left;
+		font-weight: 300;
+		padding: 0 20px;
+	}
+	p{
+		color: #919fab;
+		font-size: 18px;
+	}
+}
+
+.newUsersList{
+	@include clearfix;
+	position: relative;
+	margin-bottom: 40px;
+	width: 100%;
+	display: block;
+	li{
+		margin-bottom: 20px;
+		@include media-phone {
+			width: 33%;
+			float: left;
+		}
+		a{
+			display: block;
+			@extend .animated;
+			&:hover{
+				@extend .bounce;
+			}
+			img{
+				border-radius: 100%;
+				margin-left: 20px;
+			}
+		}
+	}
+}
+
+.joinNow{
+	float: right;
+	display: inline-block;
+	color: #152937;
+	font-size: 18px;
+	font-weight: bold;
+	text-align:center;
+	padding: 0 25px;
+	height: 42px;
+	width: auto;
+	line-height:42px;
+	border: 2px solid #152937;
+	background-color: rgba(255,255,255,.04);
+	&:hover{
+		background-color:#152937;
+		color: #fff;
+	}
+}
+
+
+
+
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+
+.bounce {
+  -webkit-animation-name: bounce;
+  animation-name: bounce;
+}
+@-webkit-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  40% {
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+
+  60% {
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  40% {
+    -webkit-transform: translateY(-30px);
+    -ms-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+
+  60% {
+    -webkit-transform: translateY(-15px);
+    -ms-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+
+
+// About Us Page 
+section.aboutUsPage{
+	text-align:center;
+	 h4{
+		text-align:center;
+	}
+	a{
+		margin: 5% 0;
+		img{
+			display: inline-block;
+		}
+		span{
+			width: 100%;
+			display: block;
+			&.name{
+				color: #333;
+				font-size: 18px;
+			}
+			&.title{
+				color: #919fab;
+				font-size: 14px;
+			}
+		}
+		&:hover span{
+			color: #222;
+			&.title{
+				opacity: .5;
+			}
+		}
+	}
+}

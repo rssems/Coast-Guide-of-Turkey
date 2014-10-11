@@ -1,0 +1,43 @@
+/*------------------------------------*\
+    Common Import
+\*------------------------------------*/
+
+@import "main";
+@import "modules/tabbedSelection";
+@import "modules/form";
+
+.tabbedSelection .form {
+
+	label,.defaultIMGLabel{
+		line-height: 50px;
+		color: #333;
+		float: left;
+	}
+	.col-1-1{
+		margin-bottom: 20px;
+	}
+	input[type="checkbox"]{
+		width: 10%!important;
+		float: left;
+		display: inline-block;
+	}
+}
+
+.uploadFoto{
+	display: block;
+	cursor:pointer;
+}
+.defaultIMG{
+		display: block;
+		float: left;
+		margin-right: 20px;
+		width: 60px;
+		height: 60px;
+		border-radius:30px;
+		overflow: hidden;
+		@include background-image-retina('avatar_default', 'png', 60px, 60px);
+}
+.defaultIMGLabel{
+	color: #0f85c1!important;
+	margin-top: 5px;
+}

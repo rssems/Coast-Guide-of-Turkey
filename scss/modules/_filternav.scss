@@ -1,0 +1,213 @@
+// Reseting Header Shadow if page included filternav
+header{
+	-moz-box-shadow: 0;
+	-webkit-box-shadow: 0;
+	box-shadow: 0;
+}
+$filterNavH:64px;
+section.filterNav{
+	width: 100%;
+	position: relative;
+	z-index: 100;
+	min-height: $filterNavH;
+	background-color: #055777;
+	-moz-box-shadow: 0 2px 2px rgba(0,0,0,.16);
+	-webkit-box-shadow: 0 2px 2px rgba(0,0,0,.16);
+	box-shadow: 0 2px 2px rgba(0,0,0,.16);
+	@include media-phone {
+		position: relative!important;
+	}
+	.col-1-3{
+		overflow: hidden;
+		position: relative;
+	}
+	h2 {
+		color: #fff;
+		font-size: 24px;
+		font-weight: 300;
+		line-height: $filterNavH;
+		@include transition;
+		@include uzama;
+	}
+	.logo-white{
+		@include retina-sprite(logo-white, common);
+		text-indent: -9999px;
+		margin-top: 10px;
+		float: left;
+		// opacity: 0;
+		@include transition;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: -2;
+		opacity: 0;
+	}
+}
+
+//after sticked
+.sticked section.filterNav {
+	h2{
+		margin-left: 60px;
+		@include media-phone {
+			margin-left:0!important;
+		}
+	}
+	.logo-white{
+		left: 0;
+		z-index: 1;
+		opacity: 1;
+		@include media-phone {
+			opacity:0!important;
+		}
+	}
+
+}
+
+
+
+// Right side
+section.filterNav{
+	.grid{
+		overflow: visible;
+	}
+	.col-1-6{
+		position: relative;
+	}
+	.topArea{
+		z-index: 10;
+		position: relative;
+		opacity: 0.4;
+		border-left:1px solid #196a8a;
+		height: $filterNavH;
+		padding: 0 10%;
+		cursor:context-menu;
+		// cursor: pointer;
+		span{
+			color: #77a7bb;
+			font-size: 13px;
+			display: block;
+			line-height: 45px;
+		}
+		.title{
+			color: #fff;
+			font-size: 16px;
+			margin-top: -15px;
+			
+			// ya tasarsa?
+			@include uzama;
+
+			width: 100%;
+
+			&:after {
+				content: "";
+				display: inline-block;
+				margin-left: 5%;
+				width: 0px;
+				height: 0px;
+				border-style: solid;
+				border-width: 5px 4px 0 4px;
+				border-color: #ffffff transparent transparent transparent;
+			}
+		}
+		&:hover{
+			opacity: 1;
+			background-color: #095e80;
+		}
+	}
+	.col-1-6:last-of-type .topArea{
+		border-right:1px solid #196a8a;
+	}
+	.selected{
+		opacity: 1;
+	}
+	.notNow{
+		cursor: not-allowed;
+		opacity: 0.4!important;
+		background-color:transparent!important;
+	}
+}
+
+
+
+// bottom area
+.bottomArea{
+	z-index: 20;
+	width: 100%;
+	height:auto;
+	display: block;
+	position: absolute;
+	top: $filterNavH;
+	left: 0;
+	border: 1px solid rgba(6,88,120,.12);
+	border-top:none;
+	background-color: #fff;
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,.16);
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.16);
+	box-shadow: 0 1px 2px rgba(0,0,0,.16);
+	padding: 10%;
+
+	form{
+		position: relative;
+		margin-bottom: 10%;
+		label {
+			position: absolute;
+			top: 10px;
+			left: 10px;
+			span{
+				@include retina-sprite(icn_search, common);
+			}
+		}
+		input{
+			border:none;
+			box-shadow:0;
+			width: 100%;
+			height: 35px;
+			border: 1px solid #d5dbe1;
+			-moz-border-radius: 3px;
+			-webkit-border-radius: 3px;
+			border-radius: 3px;
+			padding-left: 30px;
+		}
+	}
+	.selectWrapper {
+		margin-left: -12.5%;
+		width: 125%;
+		display: block;
+		li{
+			color: #333;
+			font-family: "Source Sans Pro", sans-serif;
+			font-size: 14px;
+			height: 42px;
+			line-height: 42px;
+			padding: 0 10%;
+			cursor: pointer;
+			width: 100%;
+			@include uzama;
+			&:hover{
+				background-color: #f2f4f7;
+			}
+			a{
+				display: block;
+			}
+		}
+	}
+}
+
+
+
+// Nano Slider
+@import "../vendor/nanoscroller";
+.nano { height: 126px; }
+// .nano .nano-content { padding: 10px; }
+.nano .nano-pane  {
+	right: 9%;
+	width: 3px;
+	border-radius: 1px;
+	background-color: rgba(87,87,87,.1);
+}
+.nano .nano-slider {
+	margin: 0!important;
+	width: 3px;
+	border-radius: 1px;
+	background-color: rgba(87,87,87,.5);
+}

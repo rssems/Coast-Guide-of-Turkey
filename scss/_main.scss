@@ -1,0 +1,40 @@
+/*!
+Site Name: Coast Guide of Turkey
+Site URL: http://www.coastguideofturkey.com/;
+Author: Riza Selcuk Saydam;
+Author URL: http://www.rss-ems.com;
+*/
+
+*, *:before, *:after { box-sizing: border-box; }
+@import "compass";
+
+/*------------------------------------*\
+    Core variables and mixins
+\*------------------------------------*/
+
+@import "variables";
+@import "help/mixins";
+@import "help/retina";
+
+/*------------------------------------*\
+    RESET & HELP
+\*------------------------------------*/
+
+@import "help/normalize";
+@import "help/base";
+
+
+/*------------------------------------*\
+    COMMON
+\*------------------------------------*/
+
+@import "global";
+@import "grid";
+@import "modules/header";
+@import "modules/footer";
+
+/*------------------------------------*\
+    VENDOR
+\*------------------------------------*/
+
+// @import "vendor/...";

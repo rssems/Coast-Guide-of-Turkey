@@ -1,0 +1,243 @@
+/*------------------------------------*\
+    Common Import
+\*------------------------------------*/
+
+@import "main";
+@include retina-sprite-add(koy, "sprites/koy/*.png", "sprites-retina/koy/*.png");
+@include retina-sprite-add(star, "sprites/star/*.png", "sprites-retina/star/*.png");
+@import "modules/filternav";
+@import "modules/map";
+@import "modules/welcomeArticle";
+@import "modules/selection";
+	@import "modules/tabbedSelection";
+@import "modules/facilities";
+@import "modules/mailing";  
+@import "modules/weatherItem";  
+@import "modules/notes";  
+@import "modules/comments";
+
+section.coverPhoto{
+	position: relative;
+	overflow:hidden;
+	.grid{
+		position: relative;
+		display: block;
+		margin-top: -60px;
+	}
+	.allPhotosLink{
+		display: block;
+		height: 38px;
+		border: 2px solid #fff;
+		background-color: rgba(6,88,120,.6);
+		line-height:34px;
+		text-align:center;
+		color: #fefefe;
+		font-size: 14px;
+		font-weight: bold;
+		&:hover{
+			background-color:rgba(6,88,120,1);
+		}
+		span{
+					@include retina-sprite(icon-allPhotos, koy);
+					margin-right: 5px;
+					display: inline-block;
+					vertical-align: middle;
+					margin-top: -3px;
+		}
+	}
+}
+article.welcome2 p:first-of-type{
+			font-size: 14px!important;
+}
+
+
+
+section.info .grid{
+	padding-left: 90px;
+	.top{
+		display: block;
+		border-bottom:1px solid #dde2e5;
+
+	}
+	h1{
+		color: #333;
+		font-size: 30px;
+		font-weight: bold;
+		float: left;
+		margin-bottom: 25px;
+	}
+	.score{
+		border-right:1px solid #dde2e5;
+
+	}
+		.scroreCount{
+			width: 40px;
+			height: 40px;
+			border-radius: 20px;
+			background-color: #fbab10;
+			color: #fff;
+			font-size: 18px;
+			font-weight: bold;
+			text-align:center;
+			line-height:40px;
+			float: left;
+			margin-right: 15px;
+		}
+		.scoreStars{
+			position: relative;
+			float: left;
+			margin-top: 9px;
+			.fullWrapper{
+				position: absolute;
+				top: 0;
+				left: 0;
+				overflow: hidden;
+				height: 16px;
+				.fullWrapperAgain{
+					width: 90px;
+					height: 22px;
+				}
+			}
+		}
+		.oyver{
+			color: #919fab;
+			font-size: 14px;
+			line-height:35px;
+			margin-left: 15px;
+			cursor: pointer;
+			&:hover{
+				color: #222;
+			}
+		}
+		span.icon-starFull{
+					@include retina-sprite(icon-starFull, star);
+		}
+		span.icon-starEmty{
+					@include retina-sprite(icon-starEmty, star);
+		}
+		.bottom{
+			margin-top: 10px;
+			.infoItem,a{
+				margin-bottom: 30px;
+				span{
+					display: block;
+					color: #919fab;
+					font-size: 14px;
+					text-transform: uppercase;
+					@include uzama;
+				}
+				color: #333;
+				font-size: 14px;
+				@include uzama;
+			}
+		}
+}
+
+.btn_add {
+	display: block;
+	float: right;
+	width: auto;
+	height: 40px;
+	background-color: #919fab;
+	color: #fefefe;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 40px;
+	padding-right: 30px;
+	&.right{
+		margin-right: 10px;
+	}
+	&:hover{
+		color: #fff;
+	}
+	> span {
+		width: 40px;
+		height: 40px;
+		background-color: #7f8e9a;
+		display: block;
+		float: left;
+		margin-right: 30px;
+		span{
+				@include retina-sprite(icon-addToPlaces, koy);
+				margin:12px auto;
+				display: block;
+		}
+	}
+	&.checked{
+		background-color: #2fb16d;
+		> span{
+			background-color: #2a9f61;
+			span{
+				@include retina-sprite(icon-check, koy);
+				margin:12px auto;
+				display: block;
+			}
+		}
+	}
+	&.addNote > span {
+		margin-right: 5px;
+		span{
+			@include retina-sprite(icon-addNote, koy);
+			margin:12px auto;
+			display: block;
+		}
+	}
+}
+
+.allPhotosLinkSelect{
+	span{
+		@include retina-sprite(icon-allPhotos, koy);
+		margin-right: 10px;
+		vertical-align: middle;
+		margin-top: -4px;
+	}
+}
+.allPhotosLinkTop,
+.allPhotosLinkTop span{
+	height: 3px;
+	background-color:#fff;
+	width: 99%;
+	position: absolute;
+	top: -4px;
+	left: 0.5%;
+	display: block;
+	border: 1px solid #dde2e5;
+	border-bottom: 0;
+}
+ 
+.commentsAreaKoy{
+	padding:1% 0;
+	h4{
+		color: #152937;
+		font-size: 36px;
+		margin-bottom: 25px;
+		text-align: left;
+		font-weight: 300;
+		// padding: 0 20px;
+		background-color: #fff;
+		position: relative;
+		z-index: 2;
+		float: left;
+		display: inline-block;
+		span{
+			font-size: 24px;
+			&:before{
+				content: "(";
+			}
+			&:after{
+				content: ")";
+			}
+
+		}
+	}
+	.col-1-2.first{
+		padding-right: 5%;
+		textarea{
+			height: 150px;
+		}
+	}
+}
+ 
+ 
+ 
+ 

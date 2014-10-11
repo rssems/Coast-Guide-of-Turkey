@@ -1,0 +1,25 @@
+/*------------------------------------*\
+    Common Import
+\*------------------------------------*/
+
+@import "main";
+@include retina-sprite-add(home, "sprites/home/*.png", "sprites-retina/home/*.png");
+@import "modules/welcomeArticle";
+@import "modules/selection";
+@include retina-sprite-add(home-promote, "sprites/home-promote/*.png", "sprites-retina/home-promote/*.png");
+@import "modules/mailing";
+ 
+ 
+// specificModule
+.specificModule{
+	padding: 5% 0;
+	p{
+		padding-right: 15%;
+		color: #333;
+		font-size: 14px;
+		&:first-of-type{
+			font-size: 18px;
+			font-weight: bold;
+		}
+	}
+}

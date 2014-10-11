@@ -1,0 +1,154 @@
+.weatherItem{
+	margin-right: 20px;
+	margin-bottom: 20px;
+	background-color: #eff3f6;
+
+	.weatherItem-time{
+		color: #fff;
+		font-size: 18px;
+		font-weight: bold;
+		background-color: #055777;
+		height: 40px;
+		width: 70px;
+		line-height: 40px;
+		padding: 8px 10px 8px 15px;
+		position: relative;
+		&:after{
+			content:"";
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 40px 10px 0 0;
+			border-color: #055777 transparent transparent transparent;
+			position: absolute;
+			right: -10px;
+			top: 0;
+		}
+	}
+
+	.weatherItem-basinc{
+		color: #919fab;
+		font-size: 14px;
+		width: 100%;
+		display: block;
+		padding-left: 20px;
+		margin-top: 15px;
+		span{
+			color: #333;
+			display: block;
+			width: 100%;
+			margin-top: -3px;
+		}
+	}
+
+	.weatherItem-sky{
+		display: block;
+		margin-left: 15%;
+		margin-top: 10px;
+		.weatherItem-sky-c{
+			color: #333;
+			font-size: 24px;
+			font-weight: 300;
+			span{
+				font-size: 30px;
+			}
+		}
+	}
+
+	.weatherItem-wind{
+		display: block;
+		margin-left: 15%;
+		margin-bottom: 20px;
+		.weatherItem-wind-r{
+			color: #333;
+			font-size: 30px;
+			font-weight: 300;
+		}
+	}
+
+	.weatherItem-sky-iconWrapper,
+	.weatherItem-wind-iconWrapper{
+		width: 30px;
+		height: 30px;
+		margin-right: 10px;
+		display: block;
+		text-align: center;
+		margin-top: 8px;
+		float: left;
+		span{
+			vertical-align: middle;
+		}
+	}
+}
+
+
+// RUZGAR
+
+@include retina-sprite-add(ruzgar, "sprites/ruzgar/*.png", "sprites-retina/ruzgar/*.png");
+
+span.ruzgar-1{
+	@include retina-sprite(ruzgar-1, ruzgar);
+}
+span.ruzgar-2{
+	@include retina-sprite(ruzgar-2, ruzgar);
+}
+span.ruzgar-3{
+	@include retina-sprite(ruzgar-3, ruzgar);
+}
+span.ruzgar-4{
+	@include retina-sprite(ruzgar-4, ruzgar);
+}
+span.ruzgar-5{
+	@include retina-sprite(ruzgar-5, ruzgar);
+}
+span.ruzgar-6{
+	@include retina-sprite(ruzgar-6, ruzgar);
+}
+span.ruzgar-7{
+	@include retina-sprite(ruzgar-7, ruzgar);
+}
+span.ruzgar-8{
+	@include retina-sprite(ruzgar-8, ruzgar);
+}
+span.ruzgar-9{
+	@include retina-sprite(ruzgar-9, ruzgar);
+}
+span.ruzgar-10{
+	@include retina-sprite(ruzgar-10, ruzgar);
+}
+span.ruzgar-11{
+	@include retina-sprite(ruzgar-11, ruzgar);
+}
+span.ruzgar-12{
+	@include retina-sprite(ruzgar-12, ruzgar);
+}
+span.ruzgar-13{
+	@include retina-sprite(ruzgar-13, ruzgar);
+}
+span.ruzgar-14{
+	@include retina-sprite(ruzgar-14, ruzgar);
+}
+span.ruzgar-15{
+	@include retina-sprite(ruzgar-15, ruzgar);
+}
+span.ruzgar-16{
+	@include retina-sprite(ruzgar-16, ruzgar);
+}
+// HAVA
+@include retina-sprite-add(hava, "sprites/hava/*.png", "sprites-retina/hava/*.png");
+
+span.hava-acik{
+	@include retina-sprite(hava-acik, hava);
+}
+span.hava-bulutlu{
+	@include retina-sprite(hava-bulutlu, hava);
+}
+span.hava-parcali{
+	@include retina-sprite(hava-parcali, hava);
+}
+span.hava-sisli{
+	@include retina-sprite(hava-sisli, hava);
+}
+span.hava-yagmurlu{
+	@include retina-sprite(hava-yagmurlu, hava);
+}

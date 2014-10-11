@@ -1,0 +1,61 @@
+.warnings{
+	width: 100%;
+	display: block;
+	padding: 5% 0 1% 0;
+
+	.col-1-3{
+		padding-right: 20px;
+		margin-bottom: 20px;
+		 a {
+			height: 150px;
+			background-color: #dce5ec;
+			width: 100%;
+			display: block;
+			position: relative;
+			// overflow: hidden;
+			.text{
+				color: #687178;
+				font-size: 18px;
+				font-weight: bold;
+				position: absolute;
+				bottom: 15px;
+				left: 15px;
+				z-index: 2;
+			}
+			.warnings-icon{
+				position: absolute;
+				bottom: 10px;
+				right: 10px;
+				z-index: 1;
+			}
+			&:hover{
+				background-color: #2fb16d;
+				.text{
+					color: #fff;
+				}
+				.warnings-icon{
+					opacity: 0.3;
+				}
+			}
+		}
+	}
+}
+
+@include retina-sprite-add(warnings, "sprites/warnings/*.png", "sprites-retina/warnings/*.png");
+span.dalis{
+	@include retina-sprite(dalis, warnings);
+}
+span.demirleme{
+	@include retina-sprite(demirleme, warnings);
+	margin-bottom: -25px;
+}
+span.fenerler{
+	@include retina-sprite(fenerler, warnings);
+	margin-bottom: -25px;
+}
+span.meteoroloji{
+	@include retina-sprite(meteoroloji, warnings);
+}
+span.ruzgarlar{
+	@include retina-sprite(ruzgarlar, warnings);
+}

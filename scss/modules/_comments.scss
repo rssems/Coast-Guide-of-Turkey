@@ -1,0 +1,132 @@
+.comments{
+	overflow: scroll;
+	@include media-phone {
+		height: auto!important;
+		overflow: visible;
+	}
+	li {
+		margin-bottom: 20px;
+	}
+	.avatar {
+		display: block;
+		float: left;
+		margin-right: 20px;
+		margin-left: 5px;
+		img {
+			width: 50px;
+			height: 50px;
+			border-radius: 25px;
+		}
+	}
+	.left{
+		a{
+			color: #333;
+			font-size: 16px;
+			font-weight: bold;
+			width: 100%;
+			&:hover{
+				text-decoration: underline;
+			}
+		}
+		p{
+			color: #333;
+			font-size: 14px;
+		}
+	}
+}
+
+
+
+.write-comment{
+	textarea{
+		border:none;
+		box-shadow: 0;
+		width: 100%;
+		height: 69px;
+		border: 1px solid #d3dce3;
+		border-radius: 1px 406px / 1px 3px;
+		background-color: #fff;
+		font-size: 18px;
+		padding: 10px 15px;
+		margin-bottom: 10px;
+	}
+	.sent{
+		float: right;
+		color: #fff;
+		font-size: 15px;
+		font-weight: bold;
+		width: 130px;
+		height: 52px;
+		background-color: #2eb26c;
+		line-height: 52px;
+		text-align:center;
+		display: block;
+			&:hover{
+				background-color: darken(#2eb26c, 5%)
+			}
+	}
+}
+
+
+@include retina-sprite-add(comments-pagination, "sprites/comments-pagination/*.png", "sprites-retina/comments-pagination/*.png");
+.comments-pagination,.pagination{
+	width: 100%;
+	text-align:center;
+	color: #919fab;
+	font-size: 18px;
+	margin-bottom: 25px;
+	span.left{
+		@include retina-sprite(arrow-left, comments-pagination);
+		margin-right: 20px;
+		vertical-align: middle;
+		margin-top: -4px;
+	}
+	span.left.active{
+		@include retina-sprite(arrow-left-active, comments-pagination);
+		cursor: pointer;
+		&:hover{
+			opacity: 0.8;
+		}
+	}
+	span.right{
+		@include retina-sprite(arrow-right, comments-pagination);
+		margin-left: 20px;
+		vertical-align: middle;
+		margin-top: -4px;
+	}
+	span.right.active{
+		@include retina-sprite(arrow-right-active, comments-pagination);
+		cursor: pointer;
+		&:hover{
+			opacity: 0.8;
+		}
+	}
+}
+
+// pagination for search results
+.pagination{
+	display: inline-block;
+	text-align:center;
+	margin:20px;
+	li {
+		margin: 0 5px;
+		display: inline-block;
+		a{
+			float: left;
+			padding: 0 5px;
+			&:hover,&.active{
+				background-color:#92a0ab;
+				border-radius:2px;
+				color: #fff;
+			}
+			&:active{
+				background-color:#58c18a;
+			}
+		}
+		.noHoverEffect{
+			background-color:transparent!important;
+		}
+	}
+}
+
+ 

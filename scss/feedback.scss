@@ -1,0 +1,21 @@
+/*------------------------------------*\
+    Common Import
+\*------------------------------------*/
+
+@import "main";
+	@import "modules/selection-photos-popup";
+	@import "modules/form";
+
+.feedbackPopup{
+	padding: 30px 70px;
+	.title{
+		color: #333;
+		font-family: "Source Sans Pro", sans-serif;
+		font-size: 24px;
+		font-weight: bold;
+		padding-bottom: 25px;
+		border-bottom:1px solid #dde2e5;
+		display: block;
+		margin-bottom: 25px;
+	}
+}

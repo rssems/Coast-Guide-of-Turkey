@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Coast Guide of Turkey</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
+	<link rel="stylesheet" href="css/feedback.css">
+</head>
+<body>
+<a href="#" class="feedbackButton"><span></span></a>
+<div class="popup">
+	<div class="grid"> <!-- img'in height'i gelecek -->
+		<div class="col-1-4">&nbsp;</div>
+		<div class="col-1-2 popup-content feedbackPopup">
+			<div class="title">Geri Bildirim</div>
+				<form action="" class="form">
+					<div class="col-1-2 left">
+						<select id="sikayet">
+							<option value="a">A</option>
+							<option value="b">B</option>
+							<option value="c">C</option>
+							<option value="d">D</option>
+							<option value="e">E</option>
+						</select>
+					</div><!-- col-1-2 -->
+					<div class="col-1-1">
+						<textarea name="" id="" cols="30" rows="5" placeholder="Mesajınız..."></textarea>
+					</div>
+					<div class="col-1-2 left">
+						<input type="text" placeholder="Tam Adınız">
+					</div><!-- col-1-2 -->
+					<div class="col-1-2">
+						<input type="mail" placeholder="Email Adresiniz">
+					</div><!-- col-1-2 -->
+
+					<div class="col-1-2 button_register">
+						<a href="#">GÖNDER</a>
+					</div><!-- col-1-1 -->
+				</form>
+
+		</div>
+		<div class="col-1-4">&nbsp;</div>
+	</div><!-- popup-content -->
+	<span class="popup-overlay" onclick="$(this).parent().hide();"><span></span></span>
+</div><!-- popup -->
+
+
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/libs/jquery-1.10.2.min.js"><\/script>')</script>
+	<script src="js/plugins/jquery.nanoscroller.min.js"></script>
+	<script src="js/plugins/jquery.minimalect.min.js"></script>
+	    <script>
+	      $(document).ready(function(){
+	        $("#sikayet").minimalect({ placeholder: "Şikayet" });
+	      });
+	    </script>
+
+	<script src="js/plugin.js"></script>
+	<script src="js/main.js"></script>
+	<script>
+	    (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+	    function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+	    e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+	    e.src='//www.google-analytics.com/analytics.js';
+	    r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+	    ga('create','UA-XXXXX-X');ga('send','pageview');
+	</script>
+</body>
+</html>

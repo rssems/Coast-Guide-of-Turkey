@@ -1,0 +1,185 @@
+section.selection{
+	width: 100%;
+	overflow:hidden;
+	// height: auto; 540
+	background-color: #e5ebef;
+	text-align:center;
+	padding:5% 0;
+	.grid{
+		overflow: visible;
+	}
+	.col-2-3{
+		margin: 0 auto;
+		display: block;
+		text-align: center;
+		float:none;
+	}
+	h3,h4.title{
+		color: #152937;
+		font-size: 36px;
+		margin-bottom: 25px;
+	}
+	h4.title{
+		text-align: left;
+		font-weight: 300;
+		padding-left: 20px;
+	}
+
+	p{
+		font-size: 18px;
+		margin-bottom: 45px;
+		color: #919fab;
+	}
+}
+.selectedPlaces ul{
+	width: 100%;
+	display: block;
+	text-align:center;
+	position: relative;
+	overflow: visible;
+}
+.selectedPlaces li{
+	display: inline-block;
+}
+.selectedPlaces .col-1-4{
+	padding: 0;
+}
+
+.selectedPlaces li a,
+.selectedPlaces li > div{
+// .selectedPlaces li > div{
+	margin: 10px;
+	width: calc(100%-20px);
+	border: 1px solid #dde2e5;
+	background-color: #fff;
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,.09);
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.09);
+	box-shadow: 0 1px 2px rgba(0,0,0,.09);
+	position: relative;
+	padding-bottom: 40px;
+	display: block;
+
+	span.photoWrap{
+		display: block;
+		position: relative;
+		width: 94%;
+		height:auto;
+		margin: 3%;
+		padding: 0;
+		&:before {
+			content: "";
+			width: 100%;
+			height: 100%;
+			background-color: rgba(33,140,201,.72);
+			z-index: 2;
+			position: absolute;
+			top: 0;
+			left: 0;
+			display: none;
+		}
+
+		img{
+			width: 100%;
+			height: auto;
+			display: block;
+			margin: 0;
+			padding: 0;
+		}
+	}
+	&:hover span.photoWrap:before{
+		display: block;
+	}
+	h4{
+		width: 100%;
+		text-align: center;
+		color: #152937;
+		font-size: 18px;
+		position: absolute;
+		left: 0;
+		bottom: 13px;
+		z-index: 1;
+		@include uzama;
+	}
+	&:hover h4{
+		color: #0f85c1;
+	}
+	.go{
+		@include retina-sprite(arrow, common);
+		width: 56px;
+		height: 56px;
+		display: none;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin:-38px 0 0 -28px;
+		z-index: 3;
+	}
+	&:hover .go{
+		display: block;
+	}
+}
+.selectedPlaces.koy li a, 
+.selectedPlaces.koy li > div{
+	padding-bottom: 0;
+}
+
+.selectedPlaces li > div:hover{
+	span.photoWrap:before,
+	.go{
+		display: none;
+	}
+	h4{
+		color: #152937;
+	}
+}
+.selectedPlaces li.left,
+.selectedPlaces li.right{
+	opacity: .5;
+	position: absolute;
+	top: 0;
+	@include media-phone {
+		display: none;
+	}
+}
+
+.selectedPlaces li.left{
+	left: -25%;
+}
+.selectedPlaces li.right{
+	right: -25%;
+}
+.selectedPlaces li.left.second{
+	left: -50%;
+}
+.selectedPlaces li.right.second{
+	right: -50%;
+}
+
+
+// tum fotograflar button
+
+.allPhotosLinkSelect{
+	width: 100%;
+	text-align:center;
+	display: block;
+	position: absolute;
+	top: 40%;
+	left: 0;
+	color: #fff;
+	font-weight: bold;
+	font-size: 14px;
+	z-index: 10;
+} 
+
+
+
+.allPhotosLinkSelection img{
+	width: 33%!important;
+	float: left;
+}
+.allPhotosLinkSelection span.photoWrap:before{
+	display: block!important;
+}
+.allPhotosLinkSelection:hover .allPhotosLinkSelect{
+	opacity: 0;
+}

@@ -1,0 +1,103 @@
+body {
+    font-family: $sans-serif-font;
+    font-size: $base-font-size + px;
+    font-weight: 400;
+    line-height: $base-line-height;
+    color: $text-color;
+    background-color: $bg;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* LINK
+   ============================================== */
+
+a {
+    color: $link-color;
+    text-decoration: none;
+    &:hover {
+        color: $link-hover;
+    }
+    // &:hover, &:focus, &:active {
+    //     text-decoration: underline;
+    // }
+}
+
+/* TYPOGRAPHY
+   ============================================== */
+
+small {
+    font-size: 0.8em;
+}
+
+p,
+blockquote {
+    hyphens: auto;
+    margin-bottom: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $sans-serif-font;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+h1 {
+    // font-size: pxToEm(32);
+}
+
+h2 {
+    // font-size: pxToEm(26);
+}
+
+h5 {
+    // font-size: pxToEm($base-font-size);
+}
+
+h6 {
+    // font-size: pxToEm($base-font-size);
+}
+
+code, kbd, pre, samp {
+    font-family: $code-font;
+}
+
+/* COMMON SPRITE
+   ============================================== */
+
+@include retina-sprite-add(common, "sprites/common/*.png", "sprites-retina/common/*.png");
+
+
+// Feedback button
+
+.feedbackButton{
+    width: 48px;
+    height: 158px;
+    border: 1px solid #919fab;
+    border-right:0;
+    background-color: #f9fbfe;
+    display: block;
+    position: fixed;
+    top: 30%;
+    right: 0;
+    z-index: 999;
+    @include transition;
+    &:hover{
+        width: 58px;
+    }
+    span{
+        @include retina-sprite(textFeedback, common);
+        margin: 32px 0 0 17px;
+    }
+}
+
+
+// scroll popup 
+ 
+.scrollPopup{
+    position: fixed;
+    z-index: 100;
+    bottom: 0;
+    // right: -400px;
+    right: 0;
+} 

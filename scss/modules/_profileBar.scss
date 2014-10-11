@@ -1,0 +1,51 @@
+section.profileBar{
+	background-color:red;
+	width: 100%;
+	text-align: center;
+	padding: 4% 0;
+	background:#055777 url(../images/profile-bg.jpg) center center;
+
+	h1{
+		position: relative;
+		img {
+			border-radius: 100%;
+			display: inline-block;
+		}
+		.userName{
+			display: block;
+			color: #fff;
+			font-size: 36px;
+			font-weight: normal;
+			margin:10px 0;
+		}
+		.premiumBadge{
+			position: absolute;
+			top: 0;
+			left: 50%;
+			margin-left: 60px;
+			padding: 0 20px;
+			line-height:20px;
+			height: 20px;
+			-moz-border-radius: 10px;
+			-webkit-border-radius: 10px;
+			border-radius: 10px;
+			background-color: #aa54cb;
+			text-align: center;
+			color: #fff;
+			font-size: 11px;
+			font-weight: bold;
+		}
+	}
+	.sentEmail {
+		color: #fff;
+		font-size: 14px;
+		span{
+			@include background-image-retina('icon-sentEmail', 'png', 16px, 12px);
+			display: inline-block;
+			width: 16px;
+			height: 12px;
+			margin-top: 2px;
+			margin-right: 10px;
+		}
+	}
+}

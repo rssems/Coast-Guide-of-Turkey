@@ -1,0 +1,1789 @@
+/*------------------------------------*\
+    Common Import
+\*------------------------------------*/
+/*!
+Site Name: Coast Guide of Turkey
+Site URL: http://www.coastguideofturkey.com/;
+Author: Riza Selcuk Saydam;
+Author URL: http://www.rss-ems.com;
+*/
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700&subset=latin,latin-ext);
+/* line 8, ../scss/_main.scss */
+*, *:before, *:after {
+  box-sizing: border-box; }
+
+/*------------------------------------*\
+    Core variables and mixins
+\*------------------------------------*/
+/*------------------------------------*\
+    TYPOGRAPHY
+\*------------------------------------*/
+/*------------------------------------*\
+    COLOR 
+\*------------------------------------*/
+/*------------------------------------*\
+    RESPONSIVE
+\*------------------------------------*/
+/* line 104, ../scss/help/_mixins.scss */
+.clear:before, .clear:after {
+  content: " ";
+  display: table; }
+
+/* line 109, ../scss/help/_mixins.scss */
+.clear:after {
+  clear: both; }
+
+/* line 113, ../scss/help/_mixins.scss */
+.clear {
+  *zoom: 1;
+  clear: both; }
+
+/**
+ * Wraps any styles in a retina media query.
+ */
+/**
+ * Option variable to define the spacing between images in the generated sprite
+ */
+/**
+ * A mixin to create retina sprites with hover & active states
+ *
+ * You have to register a pair of sprites using `{@link #retina-sprite-add}` and then you can use this mixin:
+ * 
+ *     @include retina-sprite-add(icons, "icons/*.png", "icons-retina/*.png");
+ *
+ *     .my-icon {
+ *       @include retina-sprite(icon-name, icons);
+ *     }
+ * 
+ * @param {String} $name
+ * @param {String} [$sprite-name]
+ * @param {Boolean} [$hover=false]
+ * @param {Boolean} [$active=false]
+ */
+/**
+ * @param {String} $name
+ * @param {String} $path
+ * @param {String} $path2x
+ */
+/**
+ * Mixin for retina backgrounds where you can't use a sprite.
+ * 
+ * - Make sure you have a file@2x.png file additional to your file.png.
+ * - The mixin prepends $imgPath, which should be set globally at some point. Default is: "img/"
+ *
+ * Examples:
+ *     li {
+ *       @include retina-background(arrow, no-repeat 10px 15px)
+ *     }
+ *     
+ *     a.external {
+ *       @include retina-background(external, no-repeat right)
+ *     }
+ * 
+ * @param {String} $file Path to file relative to images folder defined in config.rb and without a file extension
+ * @param {Object} [$attr] Additional attributes like position or repetition. E.g. `no-repeat top right`
+ * @param {String} [$type] The file type.
+ */
+/*------------------------------------*\
+    RESET & HELP
+\*------------------------------------*/
+/*! normalize.css v2.1.3 | MIT License | git.io/normalize */
+/* ==========================================================================
+   HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined in IE 8/9.
+ */
+/* line 11, ../scss/help/_normalize.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block; }
+
+/**
+ * Correct `inline-block` display not defined in IE 8/9.
+ */
+/* line 30, ../scss/help/_normalize.scss */
+audio,
+canvas,
+video {
+  display: inline-block; }
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+/* line 41, ../scss/help/_normalize.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9.
+ * Hide the `template` element in IE, Safari, and Firefox < 22.
+ */
+/* line 51, ../scss/help/_normalize.scss */
+[hidden],
+template {
+  display: none; }
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+/* line 66, ../scss/help/_normalize.scss */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */ }
+
+/**
+ * Remove default margin.
+ */
+/* line 76, ../scss/help/_normalize.scss */
+body {
+  margin: 0; }
+
+/* ==========================================================================
+   Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+/* line 88, ../scss/help/_normalize.scss */
+a {
+  background: transparent; }
+
+/**
+ * Address `outline` inconsistency between Chrome and other browsers.
+ */
+/* line 96, ../scss/help/_normalize.scss */
+a:focus {
+  outline: thin dotted; }
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+/* line 104, ../scss/help/_normalize.scss */
+a:active,
+a:hover {
+  outline: 0; }
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari 5, and Chrome.
+ */
+/* line 118, ../scss/help/_normalize.scss */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/**
+ * Address styling not present in IE 8/9, Safari 5, and Chrome.
+ */
+/* line 127, ../scss/help/_normalize.scss */
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
+ */
+/* line 135, ../scss/help/_normalize.scss */
+b,
+strong {
+  font-weight: bold; }
+
+/**
+ * Address styling not present in Safari 5 and Chrome.
+ */
+/* line 144, ../scss/help/_normalize.scss */
+dfn {
+  font-style: italic; }
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+/* line 152, ../scss/help/_normalize.scss */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0; }
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+/* line 162, ../scss/help/_normalize.scss */
+mark {
+  background: #ff0;
+  color: #000; }
+
+/**
+ * Correct font family set oddly in Safari 5 and Chrome.
+ */
+/* line 171, ../scss/help/_normalize.scss */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  font-size: 1em; }
+
+/**
+ * Improve readability of pre-formatted text in all browsers.
+ */
+/* line 183, ../scss/help/_normalize.scss */
+pre {
+  white-space: pre-wrap; }
+
+/**
+ * Set consistent quote types.
+ */
+/* line 191, ../scss/help/_normalize.scss */
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019"; }
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+/* line 199, ../scss/help/_normalize.scss */
+small {
+  font-size: 80%; }
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+/* line 207, ../scss/help/_normalize.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+/* line 215, ../scss/help/_normalize.scss */
+sup {
+  top: -0.5em; }
+
+/* line 219, ../scss/help/_normalize.scss */
+sub {
+  bottom: -0.25em; }
+
+/* ==========================================================================
+   Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9.
+ */
+/* line 231, ../scss/help/_normalize.scss */
+img {
+  border: 0; }
+
+/**
+ * Correct overflow displayed oddly in IE 9.
+ */
+/* line 239, ../scss/help/_normalize.scss */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* ==========================================================================
+   Figures
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari 5.
+ */
+/* line 251, ../scss/help/_normalize.scss */
+figure {
+  margin: 0; }
+
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+/**
+ * Define consistent border, margin, and padding.
+ */
+/* line 263, ../scss/help/_normalize.scss */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+/* line 274, ../scss/help/_normalize.scss */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * 1. Correct font family not being inherited in all browsers.
+ * 2. Correct font size not being inherited in all browsers.
+ * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
+ */
+/* line 285, ../scss/help/_normalize.scss */
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 2 */
+  margin: 0;
+  /* 3 */ }
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+/* line 299, ../scss/help/_normalize.scss */
+button,
+input {
+  line-height: normal; }
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
+ * Correct `select` style inheritance in Firefox 4+ and Opera.
+ */
+/* line 311, ../scss/help/_normalize.scss */
+button,
+select {
+  text-transform: none; }
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+/* line 324, ../scss/help/_normalize.scss */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */ }
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+/* line 336, ../scss/help/_normalize.scss */
+button[disabled],
+html input[disabled] {
+  cursor: default; }
+
+/**
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+/* line 346, ../scss/help/_normalize.scss */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+/* line 358, ../scss/help/_normalize.scss */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box; }
+
+/**
+ * Remove inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+/* line 370, ../scss/help/_normalize.scss */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+/* line 379, ../scss/help/_normalize.scss */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+/**
+ * 1. Remove default vertical scrollbar in IE 8/9.
+ * 2. Improve readability and alignment in all browsers.
+ */
+/* line 390, ../scss/help/_normalize.scss */
+textarea {
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */ }
+
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+/* line 403, ../scss/help/_normalize.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/*! suit-base v0.3.0 | MIT License | github.com/suitcss */
+/* ==========================================================================
+   Base
+   ========================================================================== */
+/**
+ * A thin layer on top of normalize.css that provides a starting point more
+ * suitable for web applications. Removes the default spacing and border for
+ * appropriate elements.
+ */
+/* line 13, ../scss/help/_base.scss */
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+pre {
+  margin: 0; }
+
+/* line 27, ../scss/help/_base.scss */
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0; }
+
+/* line 33, ../scss/help/_base.scss */
+iframe {
+  border: 0; }
+
+/* line 37, ../scss/help/_base.scss */
+ol,
+ul {
+  margin: 0;
+  list-style: none;
+  padding: 0; }
+
+/**
+ * Suppress the focus outline on links that cannot be accessed via keyboard.
+ * This prevents an unwanted focus outline from appearing around elements that
+ * might still respond to pointer events.
+ */
+/* line 50, ../scss/help/_base.scss */
+[tabindex="-1"]:focus {
+  outline: none !important; }
+
+/*------------------------------------*\
+    COMMON
+\*------------------------------------*/
+/* line 1, ../scss/_global.scss */
+body {
+  font-family: "Source Sans Pro", "Helvetica Neue", Arial, Helvetica, "Liberation Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #333;
+  background-color: white;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased; }
+
+/* LINK
+   ============================================== */
+/* line 15, ../scss/_global.scss */
+a {
+  color: #333;
+  text-decoration: none; }
+  /* line 18, ../scss/_global.scss */
+  a:hover {
+    color: #333; }
+
+/* TYPOGRAPHY
+   ============================================== */
+/* line 29, ../scss/_global.scss */
+small {
+  font-size: 0.8em; }
+
+/* line 33, ../scss/_global.scss */
+p,
+blockquote {
+  hyphens: auto;
+  margin-bottom: 20px; }
+
+/* line 39, ../scss/_global.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Source Sans Pro", "Helvetica Neue", Arial, Helvetica, "Liberation Sans", sans-serif;
+  font-weight: 600;
+  line-height: 1.2; }
+
+/* line 61, ../scss/_global.scss */
+code, kbd, pre, samp {
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace; }
+
+/* COMMON SPRITE
+   ============================================== */
+/* line 73, ../scss/_global.scss */
+.feedbackButton {
+  width: 48px;
+  height: 158px;
+  border: 1px solid #919fab;
+  border-right: 0;
+  background-color: #f9fbfe;
+  display: block;
+  position: fixed;
+  top: 30%;
+  right: 0;
+  z-index: 999;
+  -webkit-transition: All 0.4s ease;
+  -moz-transition: All 0.4s ease;
+  -o-transition: All 0.4s ease;
+  -ms-transition: All 0.4s ease;
+  transition: All 0.4s ease; }
+  /* line 85, ../scss/_global.scss */
+  .feedbackButton:hover {
+    width: 58px; }
+  /* line 88, ../scss/_global.scss */
+  .feedbackButton span {
+    display: inline-block;
+    background-image: url('../images/sprites/common-sfdad18f06c.png');
+    background-position: 0 -456px;
+    background-repeat: no-repeat;
+    height: 92px;
+    width: 20px;
+    /**
+     * Option variable to turn on/off IE8 support.
+     *
+     * This requires Modernizr's test for `css-mediaqueries` and RespondJS
+     *
+     * Set to `1` to turn on support.
+     */
+    margin: 32px 0 0 17px; }
+    @media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3 / 2), (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+      /* line 88, ../scss/_global.scss */
+      .feedbackButton span {
+        background-image: url('../images/sprites-retina/common-s5fc008740d.png');
+        -moz-background-size: 248px auto;
+        -o-background-size: 248px auto;
+        -webkit-background-size: 248px auto;
+        background-size: 248px auto;
+        background-position: 0 -456px; } }
+
+/* line 97, ../scss/_global.scss */
+.scrollPopup {
+  position: fixed;
+  z-index: 100;
+  bottom: 0;
+  right: 0; }
+
+/*
+  Simple Grid
+  Learn More - http://dallasbass.com/simple-grid-a-lightweight-responsive-css-grid/
+  Project Page - http://thisisdallas.github.com/Simple-Grid/
+  Author - Dallas Bass
+  Site - dallasbass.com
+
+  External: http://css-tricks.com/dont-overthink-it-grids/
+*/
+/* line 10, ../scss/_grid.scss */
+[class*='col-'] {
+  float: left; }
+
+/* line 15, ../scss/_grid.scss */
+[class*='col-']:last-of-type {
+  padding-right: 0px; }
+
+/* line 19, ../scss/_grid.scss */
+.grid {
+  width: 100%;
+  max-width: 1140px;
+  min-width: 755px;
+  margin: 0 auto;
+  overflow: hidden; }
+
+/* line 27, ../scss/_grid.scss */
+.grid:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+/* line 33, ../scss/_grid.scss */
+.grid-pad {
+  padding: 20px 0 0px 20px; }
+
+/* line 37, ../scss/_grid.scss */
+.grid-pad > [class*='col-']:last-of-type {
+  padding-right: 20px; }
+
+/* line 41, ../scss/_grid.scss */
+.push-right {
+  float: right; }
+
+/* Content Columns */
+/* line 47, ../scss/_grid.scss */
+.col-1-1 {
+  width: 100%; }
+
+/* line 50, ../scss/_grid.scss */
+.col-2-3, .col-8-12 {
+  width: 66.66%; }
+
+/* line 54, ../scss/_grid.scss */
+.col-1-2, .col-6-12 {
+  width: 50%; }
+
+/* line 58, ../scss/_grid.scss */
+.col-1-3, .col-4-12 {
+  width: 33.33%; }
+
+/* line 62, ../scss/_grid.scss */
+.col-1-4, .col-3-12 {
+  width: 25%; }
+
+/* line 66, ../scss/_grid.scss */
+.col-1-5 {
+  width: 20%; }
+
+/* line 70, ../scss/_grid.scss */
+.col-1-6, .col-2-12 {
+  width: 16.667%; }
+
+/* line 74, ../scss/_grid.scss */
+.col-1-7 {
+  width: 14.28%; }
+
+/* line 78, ../scss/_grid.scss */
+.col-1-8 {
+  width: 12.5%; }
+
+/* line 82, ../scss/_grid.scss */
+.col-1-9 {
+  width: 11.1%; }
+
+/* line 86, ../scss/_grid.scss */
+.col-1-10 {
+  width: 10%; }
+
+/* line 90, ../scss/_grid.scss */
+.col-1-11 {
+  width: 9.09%; }
+
+/* line 94, ../scss/_grid.scss */
+.col-1-12 {
+  width: 8.33%; }
+
+/* Layout Columns */
+/* line 100, ../scss/_grid.scss */
+.col-11-12 {
+  width: 91.66%; }
+
+/* line 104, ../scss/_grid.scss */
+.col-10-12 {
+  width: 83.333%; }
+
+/* line 108, ../scss/_grid.scss */
+.col-9-12 {
+  width: 75%; }
+
+/* line 112, ../scss/_grid.scss */
+.col-5-12 {
+  width: 41.66%; }
+
+/* line 116, ../scss/_grid.scss */
+.col-7-12 {
+  width: 58.33%; }
+
+@media handheld, only screen and (max-width: 640px) {
+  /* line 123, ../scss/_grid.scss */
+  .grid {
+    width: 100%;
+    min-width: 0; }
+
+  /* line 132, ../scss/_grid.scss */
+  [class*='col-'] {
+    width: auto;
+    float: none;
+    padding-left: 0 !important;
+    padding-right: 0 !important; } }
+/* line 3, ../scss/modules/_header.scss */
+header {
+  width: 100%;
+  height: 64px;
+  background-color: #fff;
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.14);
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.14);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.14);
+  position: relative;
+  z-index: 102; }
+  @media all and (max-width: 640px) {
+    /* line 3, ../scss/modules/_header.scss */
+    header {
+      height: auto;
+      min-height: 64px; } }
+  /* line 17, ../scss/modules/_header.scss */
+  header .grid {
+    overflow: visible;
+    position: relative; }
+  /* line 21, ../scss/modules/_header.scss */
+  header h1 {
+    float: left;
+    width: 248px;
+    height: 44px;
+    margin-top: 9px; }
+    @media all and (max-width: 640px) {
+      /* line 21, ../scss/modules/_header.scss */
+      header h1 {
+        width: 100%;
+        display: block;
+        text-align: center; } }
+    /* line 31, ../scss/modules/_header.scss */
+    header h1 a {
+      text-indent: -9999px;
+      display: block;
+      display: inline-block;
+      background-image: url('../images/sprites/common-sfdad18f06c.png');
+      background-position: 0 -410px;
+      background-repeat: no-repeat;
+      height: 44px;
+      width: 248px;
+      /**
+       * Option variable to turn on/off IE8 support.
+       *
+       * This requires Modernizr's test for `css-mediaqueries` and RespondJS
+       *
+       * Set to `1` to turn on support.
+       */ }
+      @media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3 / 2), (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+        /* line 31, ../scss/modules/_header.scss */
+        header h1 a {
+          background-image: url('../images/sprites-retina/common-s5fc008740d.png');
+          -moz-background-size: 248px auto;
+          -o-background-size: 248px auto;
+          -webkit-background-size: 248px auto;
+          background-size: 248px auto;
+          background-position: 0 -410px; } }
+  /* line 37, ../scss/modules/_header.scss */
+  header .col-1-5.search {
+    float: left;
+    height: 30px;
+    border-left: 1px solid #d4d8d9;
+    margin: 20px 0 0 20px; }
+    @media all and (max-width: 640px) {
+      /* line 37, ../scss/modules/_header.scss */
+      header .col-1-5.search {
+        border: none;
+        display: none; } }
+    /* line 46, ../scss/modules/_header.scss */
+    header .col-1-5.search form {
+      position: relative; }
+      /* line 49, ../scss/modules/_header.scss */
+      header .col-1-5.search form label {
+        width: 16px;
+        height: 16px;
+        position: absolute;
+        top: 6px;
+        left: 10px; }
+        /* line 56, ../scss/modules/_header.scss */
+        header .col-1-5.search form label span {
+          width: 16px;
+          height: 16px;
+          display: inline-block;
+          display: inline-block;
+          background-image: url('../images/sprites/common-sfdad18f06c.png');
+          background-position: 0 -284px;
+          background-repeat: no-repeat;
+          height: 16px;
+          width: 16px;
+          /**
+           * Option variable to turn on/off IE8 support.
+           *
+           * This requires Modernizr's test for `css-mediaqueries` and RespondJS
+           *
+           * Set to `1` to turn on support.
+           */ }
+          @media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3 / 2), (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+            /* line 56, ../scss/modules/_header.scss */
+            header .col-1-5.search form label span {
+              background-image: url('../images/sprites-retina/common-s5fc008740d.png');
+              -moz-background-size: 248px auto;
+              -o-background-size: 248px auto;
+              -webkit-background-size: 248px auto;
+              background-size: 248px auto;
+              background-position: 0 -284px; } }
+      /* line 63, ../scss/modules/_header.scss */
+      header .col-1-5.search form input {
+        border: none;
+        color: #92a0ab;
+        font-size: 16px;
+        height: 30px;
+        padding-left: 35px; }
+        @media all and (min-width: 768px) and (max-width: 1023px) {
+          /* line 63, ../scss/modules/_header.scss */
+          header .col-1-5.search form input {
+            font-size: 14px; } }
+        /* line 72, ../scss/modules/_header.scss */
+        header .col-1-5.search form input:focus {
+          outline: none; }
+      /* line 77, ../scss/modules/_header.scss */
+      header .col-1-5.search form ::-webkit-input-placeholder {
+        color: #92a0ab; }
+      /* line 81, ../scss/modules/_header.scss */
+      header .col-1-5.search form :-moz-placeholder {
+        /* Firefox 18- */
+        color: #92a0ab; }
+      /* line 85, ../scss/modules/_header.scss */
+      header .col-1-5.search form ::-moz-placeholder {
+        /* Firefox 19+ */
+        color: #92a0ab; }
+      /* line 89, ../scss/modules/_header.scss */
+      header .col-1-5.search form :-ms-input-placeholder {
+        color: #92a0ab; }
+  /* line 95, ../scss/modules/_header.scss */
+  header .col-1-2.second {
+    float: right; }
+    /* line 97, ../scss/modules/_header.scss */
+    header .col-1-2.second ul {
+      float: right; }
+    /* line 100, ../scss/modules/_header.scss */
+    header .col-1-2.second li {
+      float: left; }
+      /* line 103, ../scss/modules/_header.scss */
+      header .col-1-2.second li > a {
+        color: #5f6d72;
+        font-weight: 600;
+        height: 64px;
+        line-height: 64px;
+        padding: 4px 16px 0 16px;
+        display: block;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        transition: all 0.3s; }
+        @media all and (min-width: 768px) and (max-width: 1023px) {
+          /* line 103, ../scss/modules/_header.scss */
+          header .col-1-2.second li > a {
+            padding: 4px 4px 0 4px;
+            margin: 0;
+            font-size: 14px; } }
+        @media all and (max-width: 640px) {
+          /* line 103, ../scss/modules/_header.scss */
+          header .col-1-2.second li > a {
+            padding: 4px 1px 0 1px;
+            margin: 0;
+            font-size: 14px; } }
+        /* line 123, ../scss/modules/_header.scss */
+        header .col-1-2.second li > a:hover {
+          background-color: #fcfcfc; }
+        /* line 126, ../scss/modules/_header.scss */
+        header .col-1-2.second li > a.active {
+          color: #0f85c2; }
+    /* line 131, ../scss/modules/_header.scss */
+    header .col-1-2.second .sign a {
+      background-color: #2fb26d;
+      font-size: 14px;
+      color: #fff;
+      margin-left: 15px;
+      padding-left: 46px;
+      position: relative; }
+      @media all and (max-width: 640px) {
+        /* line 131, ../scss/modules/_header.scss */
+        header .col-1-2.second .sign a {
+          padding: 4px 6px 0 6px;
+          font-size: 12px;
+          margin: 0; } }
+      @media all and (min-width: 768px) and (max-width: 1023px) {
+        /* line 131, ../scss/modules/_header.scss */
+        header .col-1-2.second .sign a {
+          padding: 4px 4px 0 4px;
+          font-size: 12px;
+          margin: 0; } }
+      @media all and (min-width: 1024px) and (max-width: 1223px) {
+        /* line 131, ../scss/modules/_header.scss */
+        header .col-1-2.second .sign a {
+          padding-left: 35px; } }
+      /* line 151, ../scss/modules/_header.scss */
+      header .col-1-2.second .sign a:hover {
+        background-color: #2a9e61; }
+      /* line 154, ../scss/modules/_header.scss */
+      header .col-1-2.second .sign a span {
+        display: inline-block;
+        background-image: url('../images/sprites/common-sfdad18f06c.png');
+        background-position: 0 -302px;
+        background-repeat: no-repeat;
+        height: 16px;
+        width: 16px;
+        /**
+         * Option variable to turn on/off IE8 support.
+         *
+         * This requires Modernizr's test for `css-mediaqueries` and RespondJS
+         *
+         * Set to `1` to turn on support.
+         */
+        position: absolute;
+        top: 50%;
+        left: 20px;
+        margin-top: -4px; }
+        @media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3 / 2), (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+          /* line 154, ../scss/modules/_header.scss */
+          header .col-1-2.second .sign a span {
+            background-image: url('../images/sprites-retina/common-s5fc008740d.png');
+            -moz-background-size: 248px auto;
+            -o-background-size: 248px auto;
+            -webkit-background-size: 248px auto;
+            background-size: 248px auto;
+            background-position: 0 -302px; } }
+        @media all and (max-width: 640px) {
+          /* line 154, ../scss/modules/_header.scss */
+          header .col-1-2.second .sign a span {
+            display: none; } }
+        @media all and (min-width: 768px) and (max-width: 1023px) {
+          /* line 154, ../scss/modules/_header.scss */
+          header .col-1-2.second .sign a span {
+            display: none; } }
+        @media all and (min-width: 1024px) and (max-width: 1223px) {
+          /* line 154, ../scss/modules/_header.scss */
+          header .col-1-2.second .sign a span {
+            left: 10px; } }
+
+/* line 178, ../scss/modules/_header.scss */
+.logged-in {
+  position: relative; }
+
+/* line 181, ../scss/modules/_header.scss */
+.logged-in > a {
+  border-left: 1px solid #d3d7d9;
+  border-right: 1px solid #d3d7d9;
+  display: block; }
+  /* line 186, ../scss/modules/_header.scss */
+  .logged-in > a:hover {
+    background-color: #f0f2f3; }
+  /* line 189, ../scss/modules/_header.scss */
+  .logged-in > a img {
+    width: 36px;
+    height: 36px;
+    border-radius: 18px;
+    float: left;
+    margin-top: 15px;
+    margin-right: 5px; }
+  /* line 197, ../scss/modules/_header.scss */
+  .logged-in > a span {
+    display: inline-block;
+    background-image: url('../images/sprites/common-sfdad18f06c.png');
+    background-position: 0 -58px;
+    background-repeat: no-repeat;
+    height: 8px;
+    width: 16px;
+    /**
+     * Option variable to turn on/off IE8 support.
+     *
+     * This requires Modernizr's test for `css-mediaqueries` and RespondJS
+     *
+     * Set to `1` to turn on support.
+     */ }
+    @media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3 / 2), (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+      /* line 197, ../scss/modules/_header.scss */
+      .logged-in > a span {
+        background-image: url('../images/sprites-retina/common-s5fc008740d.png');
+        -moz-background-size: 248px auto;
+        -o-background-size: 248px auto;
+        -webkit-background-size: 248px auto;
+        background-size: 248px auto;
+        background-position: 0 -58px; } }
+
+/* line 202, ../scss/modules/_header.scss */
+.profile-menu {
+  display: block;
+  position: absolute;
+  bottom: -166px;
+  right: 0;
+  width: 170px;
+  height: auto;
+  border: 1px solid rgba(6, 88, 120, 0.12);
+  background-color: #fff;
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.16);
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.16);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.16);
+  z-index: 10; }
+  /* line 216, ../scss/modules/_header.scss */
+  .profile-menu li a {
+    display: block;
+    padding: 0 20px;
+    color: #333;
+    font-size: 14px;
+    width: 170px;
+    line-height: 41px;
+    height: 41px; }
+    /* line 224, ../scss/modules/_header.scss */
+    .profile-menu li a:hover {
+      background-color: #f2f4f7; }
+
+/* line 1, ../scss/modules/_search-suggestions.scss */
+.col-1-5.search {
+  position: relative; }
+
+/* line 4, ../scss/modules/_search-suggestions.scss */
+.btn_close {
+  display: inline-block;
+  background-image: url('../images/sprites/common-sfdad18f06c.png');
+  background-position: 0 -68px;
+  background-repeat: no-repeat;
+  height: 12px;
+  width: 12px;
+  /**
+   * Option variable to turn on/off IE8 support.
+   *
+   * This requires Modernizr's test for `css-mediaqueries` and RespondJS
+   *
+   * Set to `1` to turn on support.
+   */
+  position: absolute;
+  top: -35px;
+  right: 10px; }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3 / 2), (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+    /* line 4, ../scss/modules/_search-suggestions.scss */
+    .btn_close {
+      background-image: url('../images/sprites-retina/common-s5fc008740d.png');
+      -moz-background-size: 248px auto;
+      -o-background-size: 248px auto;
+      -webkit-background-size: 248px auto;
+      background-size: 248px auto;
+      background-position: 0 -68px; } }
+
+/* line 10, ../scss/modules/_search-suggestions.scss */
+.search-suggestions {
+  position: absolute;
+  z-index: 100;
+  left: 0;
+  top: 45px;
+  display: inline-block;
+  min-width: 275px;
+  background-color: #fff;
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.16);
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.16);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.16);
+  font-size: 14px; }
+  /* line 23, ../scss/modules/_search-suggestions.scss */
+  .search-suggestions .search-allResults {
+    width: 100%;
+    height: 40px;
+    background-color: #055777;
+    display: block;
+    line-height: 40px;
+    padding-left: 40px; }
+    /* line 30, ../scss/modules/_search-suggestions.scss */
+    .search-suggestions .search-allResults:hover {
+      opacity: 0.8; }
+  /* line 34, ../scss/modules/_search-suggestions.scss */
+  .search-suggestions a {
+    color: #fff; }
+
+/* line 39, ../scss/modules/_search-suggestions.scss */
+.search-suggestions ul {
+  padding-top: 10px; }
+  /* line 41, ../scss/modules/_search-suggestions.scss */
+  .search-suggestions ul li a {
+    display: block;
+    padding: 8px 0;
+    color: #333;
+    font-size: 14px;
+    line-height: 20px; }
+    /* line 47, ../scss/modules/_search-suggestions.scss */
+    .search-suggestions ul li a span {
+      width: 32px;
+      height: 22px;
+      background-color: #2fb16d;
+      color: #fff;
+      font-size: 11px;
+      display: block;
+      float: left;
+      line-height: 22px;
+      text-align: center;
+      margin-right: 8px; }
+    /* line 59, ../scss/modules/_search-suggestions.scss */
+    .search-suggestions ul li a:hover {
+      background-color: #f0f2f3; }
+    /* line 62, ../scss/modules/_search-suggestions.scss */
+    .search-suggestions ul li a:active {
+      opacity: 0.8; }
+
+/* line 1, ../scss/modules/_footer.scss */
+footer {
+  width: 100%;
+  background-color: #e5e8ea;
+  display: block;
+  padding: 5% 0 1% 0; }
+  /* line 6, ../scss/modules/_footer.scss */
+  footer .title {
+    color: #5d6468;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 20px; }
+  @media all and (max-width: 640px) {
+    /* line 13, ../scss/modules/_footer.scss */
+    footer .col-1-6 {
+      max-width: 33% !important;
+      min-width: 33% !important;
+      float: left !important; }
+    /* line 18, ../scss/modules/_footer.scss */
+    footer .col-1-2 .col-1-6 {
+      display: none; }
+    /* line 21, ../scss/modules/_footer.scss */
+    footer .title {
+      margin: 10px 0; }
+    /* line 24, ../scss/modules/_footer.scss */
+    footer .col-1-6 {
+      margin-bottom: 20px; } }
+  /* line 28, ../scss/modules/_footer.scss */
+  footer .col-1-6 li a {
+    color: #7f858b;
+    font-size: 14px;
+    line-height: 26px; }
+    /* line 32, ../scss/modules/_footer.scss */
+    footer .col-1-6 li a:hover {
+      color: #424549; }
+
+/* line 41, ../scss/modules/_footer.scss */
+.socialLinks li {
+  float: left; }
+  /* line 43, ../scss/modules/_footer.scss */
+  .socialLinks li a {
+    width: 64px;
+    height: 64px;
+    background-color: #dbdee0;
+    position: relative;
+    display: block;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    -webkit-transition: All 0.4s ease;
+    -moz-transition: All 0.4s ease;
+    -o-transition: All 0.4s ease;
+    -ms-transition: All 0.4s ease;
+    transition: All 0.4s ease; }
+    /* line 52, ../scss/modules/_footer.scss */
+    .socialLinks li a span {
+      display: block; }
+    @media all and (min-width: 1024px) and (max-width: 1223px) {
+      /* line 43, ../scss/modules/_footer.scss */
+      .socialLinks li a {
+        margin-right: 4px;
+        margin-bottom: 4px; } }
+
+/* line 64, ../scss/modules/_footer.scss */
+.icon-fb span {
+  display: inline-block;
+  background-image: url('../images/sprites/common-sfdad18f06c.png');
+  background-position: 0 -108px;
+  background-repeat: no-repeat;
+  height: 20px;
+  width: 12px;
+  /**
+   * Option variable to turn on/off IE8 support.
+   *
+   * This requires Modernizr's test for `css-mediaqueries` and RespondJS
+   *
+   * Set to `1` to turn on support.
+   */
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: 20px;
+  width: 12px;
+  margin-left: -6px;
+  margin-top: -10px; }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3 / 2), (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+    /* line 64, ../scss/modules/_footer.scss */
+    .icon-fb span {
+      background-image: url('../images/sprites-retina/common-s5fc008740d.png');
+      -moz-background-size: 248px auto;
+      -o-background-size: 248px auto;
+      -webkit-background-size: 248px auto;
+      background-size: 248px auto;
+      background-position: 0 -108px; } }
+
+/* line 68, ../scss/modules/_footer.scss */
+.icon-fb:hover,
+.active .icon-fb {
+  background-color: #3b5998; }
+
+/* line 72, ../scss/modules/_footer.scss */
+.socialLinks .icon-fb:hover span,
+.socialLinks.active .icon-fb span {
+  display: inline-block;
+  background-image: url('../images/sprites/common-sfdad18f06c.png');
+  background-position: 0 -130px;
+  background-repeat: no-repeat;
+  height: 20px;
+  width: 12px;
+  /**
+   * Option variable to turn on/off IE8 support.
+   *
+   * This requires Modernizr's test for `css-mediaqueries` and RespondJS
+   *
+   * Set to `1` to turn on support.
+   */ }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3 / 2), (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+    /* line 72, ../scss/modules/_footer.scss */
+    .socialLinks .icon-fb:hover span,
+    .socialLinks.active .icon-fb span {
+      background-image: url('../images/sprites-retina/common-s5fc008740d.png');
+      -moz-background-size: 248px auto;
+      -o-background-size: 248px auto;
+      -webkit-background-size: 248px auto;
+      background-size: 248px auto;
+      background-position: 0 -130px; } }
+
+/* line 76, ../scss/modules/_footer.scss */
+.icon-tw span {
+  display: inline-block;
+  background-image: url('../images/sprites/common-sfdad18f06c.png');
+  background-position: 0 -320px;
+  background-repeat: no-repeat;
+  height: 20px;
+  width: 24px;
+  /**
+   * Option variable to turn on/off IE8 support.
+   *
+   * This requires Modernizr's test for `css-mediaqueries` and RespondJS
+   *
+   * Set to `1` to turn on support.
+   */
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: 20px;
+  width: 24px;
+  margin-left: -12px;
+  margin-top: -10px; }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3 / 2), (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+    /* line 76, ../scss/modules/_footer.scss */
+    .icon-tw span {
+      background-image: url('../images/sprites-retina/common-s5fc008740d.png');
+      -moz-background-size: 248px auto;
+      -o-background-size: 248px auto;
+      -webkit-background-size: 248px auto;
+      background-size: 248px auto;
+      background-position: 0 -320px; } }
+
+/* line 80, ../scss/modules/_footer.scss */
+.icon-tw:hover,
+.active .icon-tw {
+  background-color: #55acee; }
+
+/* line 84, ../scss/modules/_footer.scss */
+.socialLinks .icon-tw:hover span,
+.socialLinks.active .icon-tw span {
+  display: inline-block;
+  background-image: url('../images/sprites/common-sfdad18f06c.png');
+  background-position: 0 -342px;
+  background-repeat: no-repeat;
+  height: 20px;
+  width: 24px;
+  /**
+   * Option variable to turn on/off IE8 support.
+   *
+   * This requires Modernizr's test for `css-mediaqueries` and RespondJS
+   *
+   * Set to `1` to turn on support.
+   */ }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3 / 2), (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+    /* line 84, ../scss/modules/_footer.scss */
+    .socialLinks .icon-tw:hover span,
+    .socialLinks.active .icon-tw span {
+      background-image: url('../images/sprites-retina/common-s5fc008740d.png');
+      -moz-background-size: 248px auto;
+      -o-background-size: 248px auto;
+      -webkit-background-size: 248px auto;
+      background-size: 248px auto;
+      background-position: 0 -342px; } }
+
+/* line 88, ../scss/modules/_footer.scss */
+.icon-i span {
+  display: inline-block;
+  background-image: url('../images/sprites/common-sfdad18f06c.png');
+  background-position: 0 -196px;
+  background-repeat: no-repeat;
+  height: 20px;
+  width: 20px;
+  /**
+   * Option variable to turn on/off IE8 support.
+   *
+   * This requires Modernizr's test for `css-mediaqueries` and RespondJS
+   *
+   * Set to `1` to turn on support.
+   */
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: 20px;
+  width: 20px;
+  margin-left: -10px;
+  margin-top: -10px; }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3 / 2), (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+    /* line 88, ../scss/modules/_footer.scss */
+    .icon-i span {
+      background-image: url('../images/sprites-retina/common-s5fc008740d.png');
+      -moz-background-size: 248px auto;
+      -o-background-size: 248px auto;
+      -webkit-background-size: 248px auto;
+      background-size: 248px auto;
+      background-position: 0 -196px; } }
+
+/* line 92, ../scss/modules/_footer.scss */
+.icon-i:hover,
+.active .icon-i {
+  background-color: #3f729b; }
+
+/* line 96, ../scss/modules/_footer.scss */
+.socialLinks .icon-i:hover span,
+.socialLinks.active .icon-i span {
+  display: inline-block;
+  background-image: url('../images/sprites/common-sfdad18f06c.png');
+  background-position: 0 -218px;
+  background-repeat: no-repeat;
+  height: 20px;
+  width: 20px;
+  /**
+   * Option variable to turn on/off IE8 support.
+   *
+   * This requires Modernizr's test for `css-mediaqueries` and RespondJS
+   *
+   * Set to `1` to turn on support.
+   */ }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3 / 2), (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+    /* line 96, ../scss/modules/_footer.scss */
+    .socialLinks .icon-i:hover span,
+    .socialLinks.active .icon-i span {
+      background-image: url('../images/sprites-retina/common-s5fc008740d.png');
+      -moz-background-size: 248px auto;
+      -o-background-size: 248px auto;
+      -webkit-background-size: 248px auto;
+      background-size: 248px auto;
+      background-position: 0 -218px; } }
+
+/* line 100, ../scss/modules/_footer.scss */
+.icon-gp span {
+  display: inline-block;
+  background-image: url('../images/sprites/common-sfdad18f06c.png');
+  background-position: 0 -152px;
+  background-repeat: no-repeat;
+  height: 20px;
+  width: 20px;
+  /**
+   * Option variable to turn on/off IE8 support.
+   *
+   * This requires Modernizr's test for `css-mediaqueries` and RespondJS
+   *
+   * Set to `1` to turn on support.
+   */
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: 20px;
+  width: 20px;
+  margin-left: -10px;
+  margin-top: -10px; }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3 / 2), (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+    /* line 100, ../scss/modules/_footer.scss */
+    .icon-gp span {
+      background-image: url('../images/sprites-retina/common-s5fc008740d.png');
+      -moz-background-size: 248px auto;
+      -o-background-size: 248px auto;
+      -webkit-background-size: 248px auto;
+      background-size: 248px auto;
+      background-position: 0 -152px; } }
+
+/* line 104, ../scss/modules/_footer.scss */
+.icon-gp:hover,
+.active .icon-gp {
+  background-color: #dd4b39; }
+
+/* line 108, ../scss/modules/_footer.scss */
+.socialLinks .icon-gp:hover span,
+.socialLinks.active .icon-gp span {
+  display: inline-block;
+  background-image: url('../images/sprites/common-sfdad18f06c.png');
+  background-position: 0 -174px;
+  background-repeat: no-repeat;
+  height: 20px;
+  width: 20px;
+  /**
+   * Option variable to turn on/off IE8 support.
+   *
+   * This requires Modernizr's test for `css-mediaqueries` and RespondJS
+   *
+   * Set to `1` to turn on support.
+   */ }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3 / 2), (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+    /* line 108, ../scss/modules/_footer.scss */
+    .socialLinks .icon-gp:hover span,
+    .socialLinks.active .icon-gp span {
+      background-image: url('../images/sprites-retina/common-s5fc008740d.png');
+      -moz-background-size: 248px auto;
+      -o-background-size: 248px auto;
+      -webkit-background-size: 248px auto;
+      background-size: 248px auto;
+      background-position: 0 -174px; } }
+
+/* line 112, ../scss/modules/_footer.scss */
+.icon-pin span {
+  display: inline-block;
+  background-image: url('../images/sprites/common-sfdad18f06c.png');
+  background-position: 0 -240px;
+  background-repeat: no-repeat;
+  height: 20px;
+  width: 16px;
+  /**
+   * Option variable to turn on/off IE8 support.
+   *
+   * This requires Modernizr's test for `css-mediaqueries` and RespondJS
+   *
+   * Set to `1` to turn on support.
+   */
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: 20px;
+  width: 16px;
+  margin-left: -8px;
+  margin-top: -10px; }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3 / 2), (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+    /* line 112, ../scss/modules/_footer.scss */
+    .icon-pin span {
+      background-image: url('../images/sprites-retina/common-s5fc008740d.png');
+      -moz-background-size: 248px auto;
+      -o-background-size: 248px auto;
+      -webkit-background-size: 248px auto;
+      background-size: 248px auto;
+      background-position: 0 -240px; } }
+
+/* line 116, ../scss/modules/_footer.scss */
+.icon-pin:hover,
+.active .icon-pin {
+  background-color: #c8232c; }
+
+/* line 120, ../scss/modules/_footer.scss */
+.socialLinks .icon-pin:hover span,
+.socialLinks.active .icon-pin span {
+  display: inline-block;
+  background-image: url('../images/sprites/common-sfdad18f06c.png');
+  background-position: 0 -262px;
+  background-repeat: no-repeat;
+  height: 20px;
+  width: 16px;
+  /**
+   * Option variable to turn on/off IE8 support.
+   *
+   * This requires Modernizr's test for `css-mediaqueries` and RespondJS
+   *
+   * Set to `1` to turn on support.
+   */ }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3 / 2), (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+    /* line 120, ../scss/modules/_footer.scss */
+    .socialLinks .icon-pin:hover span,
+    .socialLinks.active .icon-pin span {
+      background-image: url('../images/sprites-retina/common-s5fc008740d.png');
+      -moz-background-size: 248px auto;
+      -o-background-size: 248px auto;
+      -webkit-background-size: 248px auto;
+      background-size: 248px auto;
+      background-position: 0 -262px; } }
+
+/* line 124, ../scss/modules/_footer.scss */
+.active li a:hover {
+  opacity: 0.9; }
+
+/* line 129, ../scss/modules/_footer.scss */
+.bottom {
+  margin-top: 50px; }
+
+/* line 132, ../scss/modules/_footer.scss */
+.celonis {
+  display: inline-block;
+  background-image: url('../images/sprites/common-sfdad18f06c.png');
+  background-position: 0 -82px;
+  background-repeat: no-repeat;
+  height: 24px;
+  width: 112px;
+  /**
+   * Option variable to turn on/off IE8 support.
+   *
+   * This requires Modernizr's test for `css-mediaqueries` and RespondJS
+   *
+   * Set to `1` to turn on support.
+   */
+  text-indent: -9999px;
+  float: left; }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3 / 2), (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+    /* line 132, ../scss/modules/_footer.scss */
+    .celonis {
+      background-image: url('../images/sprites-retina/common-s5fc008740d.png');
+      -moz-background-size: 248px auto;
+      -o-background-size: 248px auto;
+      -webkit-background-size: 248px auto;
+      background-size: 248px auto;
+      background-position: 0 -82px; } }
+
+/* line 137, ../scss/modules/_footer.scss */
+footer .copyright {
+  color: #7f858b;
+  font-size: 14px;
+  line-height: 25px;
+  border-left: 1px solid #b6bdc2;
+  margin-left: 10px;
+  padding-left: 10px;
+  float: left; }
+  @media all and (min-width: 768px) and (max-width: 1023px) {
+    /* line 137, ../scss/modules/_footer.scss */
+    footer .copyright {
+      width: 500px; } }
+  @media all and (max-width: 640px) {
+    /* line 137, ../scss/modules/_footer.scss */
+    footer .copyright {
+      border: none;
+      margin: 10px 0;
+      padding: 0;
+      width: 100%; } }
+
+/* line 156, ../scss/modules/_footer.scss */
+footer .language {
+  float: right; }
+  /* line 158, ../scss/modules/_footer.scss */
+  footer .language li {
+    float: left; }
+    /* line 160, ../scss/modules/_footer.scss */
+    footer .language li a {
+      color: #7f858b;
+      font-size: 16px;
+      font-weight: bold;
+      text-align: center;
+      width: 46px;
+      height: 36px;
+      border: 2px solid #e5e8ea;
+      display: block;
+      line-height: 30px; }
+
+/* line 173, ../scss/modules/_footer.scss */
+.language a.active {
+  border: 2px solid #7f858b; }
+
+/* line 176, ../scss/modules/_footer.scss */
+.language:hover a.active {
+  border: 2px solid #e5e8ea; }
+
+/* line 179, ../scss/modules/_footer.scss */
+.language a:hover {
+  border: 2px solid #7f858b !important; }
+
+/* line 183, ../scss/modules/_footer.scss */
+.socialLinks.active {
+  width: 64px;
+  position: absolute;
+  top: 0;
+  left: 0; }
+  /* line 188, ../scss/modules/_footer.scss */
+  .socialLinks.active li a {
+    width: 50px;
+    height: 50px; }
+
+/*------------------------------------*\
+    VENDOR
+\*------------------------------------*/
+/* line 1, ../scss/modules/_premiumPage.scss */
+section.premiumPage {
+  width: 100%;
+  background-color: #f8f8fa;
+  padding: 5% 0; }
+  /* line 6, ../scss/modules/_premiumPage.scss */
+  section.premiumPage h1 {
+    color: #333;
+    font-size: 24px;
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #dde2e5;
+    margin-top: 20px;
+    display: block; }
+  /* line 15, ../scss/modules/_premiumPage.scss */
+  section.premiumPage p {
+    color: #333;
+    font-size: 14px; }
+  /* line 19, ../scss/modules/_premiumPage.scss */
+  section.premiumPage .arrowPremium {
+    background-image: url("../images/icon-arrowPremium.png");
+    display: block;
+    width: 28px;
+    height: 80px;
+    margin: 150px auto 0 auto; }
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 144dpi) {
+      /* line 68, ../scss/help/_mixins.scss */
+      section.premiumPage .arrowPremium {
+        background-image: url("../images/icon-arrowPremium@2x.png");
+        -webkit-background-size: 28px 80px;
+        -moz-background-size: 28px 80px;
+        -o-background-size: 28px 80px;
+        background-size: 28px 80px; } }
+
+/* line 29, ../scss/modules/_premiumPage.scss */
+.premiumInfo {
+  margin: 0 20px;
+  border: 1px solid #c9c7d0;
+  background-color: #fff;
+  -moz-box-shadow: 0 2px 26px rgba(0, 0, 0, 0.18);
+  -webkit-box-shadow: 0 2px 26px rgba(0, 0, 0, 0.18);
+  box-shadow: 0 2px 26px rgba(0, 0, 0, 0.18); }
+  /* line 36, ../scss/modules/_premiumPage.scss */
+  .premiumInfo .top {
+    background-color: #3f3d49;
+    padding: 20px;
+    width: 100%; }
+    /* line 40, ../scss/modules/_premiumPage.scss */
+    .premiumInfo .top h2 {
+      color: #fff;
+      font-size: 30px;
+      font-weight: normal;
+      margin-bottom: 20px;
+      display: block; }
+    /* line 47, ../scss/modules/_premiumPage.scss */
+    .premiumInfo .top span {
+      display: inline-block;
+      color: #fff;
+      font-size: 14px;
+      font-weight: normal;
+      font-style: italic;
+      height: 25px;
+      background-color: #ab53cb;
+      padding-left: 30px;
+      padding-right: 22px;
+      margin-left: -19px;
+      line-height: 25px;
+      position: relative; }
+      /* line 60, ../scss/modules/_premiumPage.scss */
+      .premiumInfo .top span:after {
+        content: "";
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 25px 0 0 10px;
+        border-color: transparent transparent transparent #ab54cb;
+        position: absolute;
+        top: 0;
+        right: -10px; }
+  /* line 73, ../scss/modules/_premiumPage.scss */
+  .premiumInfo .bottom {
+    padding: 10px 30px; }
+    /* line 75, ../scss/modules/_premiumPage.scss */
+    .premiumInfo .bottom p {
+      color: #9f9da9;
+      font-size: 18px;
+      margin-top: -30px; }
+    /* line 80, ../scss/modules/_premiumPage.scss */
+    .premiumInfo .bottom li {
+      color: #3f3d49;
+      font-size: 14px;
+      height: 24px;
+      line-height: 24px;
+      margin-bottom: 20px; }
+      /* line 86, ../scss/modules/_premiumPage.scss */
+      .premiumInfo .bottom li span {
+        background-image: url("../images/icon-checkPremium.png");
+        display: block;
+        width: 24px;
+        height: 24px;
+        float: left;
+        margin-right: 10px; }
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 144dpi) {
+          /* line 68, ../scss/help/_mixins.scss */
+          .premiumInfo .bottom li span {
+            background-image: url("../images/icon-checkPremium@2x.png");
+            -webkit-background-size: 24px 24px;
+            -moz-background-size: 24px 24px;
+            -o-background-size: 24px 24px;
+            background-size: 24px 24px; } }
+  /* line 96, ../scss/modules/_premiumPage.scss */
+  .premiumInfo .bottompadding {
+    height: 20px;
+    background-color: red;
+    width: 100%;
+    display: block; }
+
+/* line 107, ../scss/modules/_premiumPage.scss */
+.btn_calltoaction {
+  margin: 10px 0;
+  position: relative;
+  z-index: 3;
+  color: #d5970d;
+  font-size: 24px;
+  font-weight: 600;
+  width: 100%;
+  height: 58px;
+  line-height: 58px;
+  border: 2px solid #d5970d;
+  background-color: rgba(255, 255, 255, 0.04);
+  text-align: center;
+  display: inline-block;
+  outline: none;
+  position: relative;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+  overflow: hidden; }
+  /* line 127, ../scss/modules/_premiumPage.scss */
+  .btn_calltoaction:hover {
+    color: #d5970d; }
+  /* line 130, ../scss/modules/_premiumPage.scss */
+  .btn_calltoaction::after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    width: 250%;
+    height: 250%;
+    top: 15%;
+    left: -35%;
+    background: #d6970e;
+    opacity: 0.12;
+    -webkit-transform: rotate(-13deg); }
+  /* line 146, ../scss/modules/_premiumPage.scss */
+  .btn_calltoaction:hover:after {
+    top: -80%;
+    -webkit-transform: rotate(0);
+    border-radius: 100%; }

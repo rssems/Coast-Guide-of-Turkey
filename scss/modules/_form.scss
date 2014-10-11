@@ -1,0 +1,237 @@
+@include retina-sprite-add(form, "sprites/form/*.png", "sprites-retina/form/*.png");
+
+@import "../vendor/jquery.minimalect";
+
+
+section.hiMember{
+	width: 100%;
+	display: block;
+	padding: 3% 0;
+	h2{
+		color: #333;
+		font-size: 24px;
+		border-bottom:1px solid #dde2e5;
+		padding-bottom: 20px;
+		margin-bottom: 30px;
+	}
+
+
+}
+
+
+//  YA DA 
+.yada{
+	text-align: center;
+	position: relative;
+	span{
+		display: inline-block;
+		color: #919fab;
+		font-size: 14px;
+		margin:35px 0;
+		position: relative;
+		z-index: 2;
+		padding: 0 10px;
+		background-color:white;
+	}
+	&:after{
+		content: "";
+		background-color:#dde2e5;
+		width: 50%;
+		position: absolute;
+		z-index: 1;
+		top: 50%;
+		left: 50%;
+		height: 1px;
+		margin-left:-25%;
+	}
+}
+	// fb tw buttons
+	.button_fb{
+		padding-right: 10px;
+	}
+	.button_tw,
+	.button_login{
+		padding-left: 10px;
+	}
+	.button_fb a,
+	.button_tw a,
+	.button_login a,
+	.button_register a,
+	.button_fb input[type="submit"],
+	.button_tw input[type="submit"],
+	.button_login input[type="submit"],
+	.button_register input[type="submit"]
+	{
+		border:none;
+		outline: 0;
+		display: block;
+		height: 50px;
+		text-align: center;
+		font-weight: normal!important;
+		color: #fff;
+		font-size: 16px;
+		line-height: 50px;
+		strong{
+			color: #fff;
+		}
+		&:hover{
+			opacity: .9;
+		}
+	}
+	.button_fb a, .button_fb input[type="submit"]{
+		background-color:#3b5997;
+		color: #cad4ea;
+	}
+	.button_tw a, .button_tw input[type="submit"]{
+		background-color: #55abed;
+		color: #d1e8fa;
+	}
+	.button_login a, .button_login input[type="submit"]{
+		background-color: #2eb26c;
+		font-weight: bold;
+		font-size:18px;
+	}
+	.button_register a, .button_register input[type="submit"]{
+		background-color: #0f85c1;
+		font-weight: bold;
+		font-size:18px;
+	}
+	.lostpass{
+		color: #333;
+		font-size: 14px;
+		text-decoration: underline;
+		padding-left: 20px;
+		margin-top: 15px;
+	}
+
+
+form.form{
+	> div {
+		position: relative;
+		margin-bottom: 20px;
+	}
+	.button_register{
+		display: block;
+		//  a{
+		// 	margin-left: -10px;
+		// 	margin-right: 10px;
+		// }
+	}
+
+	input,
+	textarea{
+		border:none;
+		box-shadow: 0;
+		background-color:#fff;
+		width: 100%;
+		height: 48px;
+		border: 1px solid #d3dce3;
+		padding: 0 20px;
+		color: #919fab;
+		font-size: 14px;
+		&:focus{
+			outline: none;
+			border-color:#0f85c1;
+			color: #333;
+		} 
+	}
+	textarea{
+		padding: 20px;
+		height: auto;
+		max-width: 100%;
+	}
+	.warning input{
+		border-color:#c53f3f;
+		color:#c53f3f;
+	}
+	label.icon{
+		position: absolute;
+		right: 20px;
+		top: 14px;;
+	}
+	.icon_mail{
+		@include retina-sprite(icon-mail, form);
+	}
+	.icon_lock{
+		@include retina-sprite(icon-lock, form);
+	} 
+	.icon_warning{
+		@include retina-sprite(icon-warning, form);
+	}
+
+	.col-1-2{
+		padding-left: 10px;
+		overflow: visible;
+	}
+	.col-1-2.left{
+		padding-left: 0;
+		padding-right: 10px;
+	}
+}
+
+
+
+.paymentTitle{
+	color: #333;
+	font-size: 24px;
+	padding-bottom: 25px;
+	margin-bottom: 25px;
+	border-bottom: 1px solid #dde2e5;
+	margin-top: 20px;
+	display: block;
+}
+.withPadding{
+	padding-right: 10px;
+}
+.col-1-2.withPadding{
+	padding-left: 0!important;
+	margin-left: 0;
+}
+.paymentTitle.second{
+	margin-top: 60px;
+}
+.warning{
+	color: #c76134;
+	}
+
+.col-10-12.button_login{
+		padding-left: 0;
+	}
+
+
+.moneyInfo{
+	margin-top: 95px;
+}
+
+
+.moneyInformation{
+	margin-right: 20px;
+	height: 96px;
+	border: 1px solid #dbdad4;
+	background-color: #faf8ee;
+	color: #333;
+	font-size: 24px;
+	padding: 25px;
+	span{
+		color: #b9b8ad;
+		font-size: 14px;
+		font-weight: bold;
+		display: block;
+	}
+}
+.useIt{
+	width: 95px;
+	height: 38px;
+	background-color: #919fab;
+	color: #fff;
+	font-size: 14px;
+	font-weight: bold;
+	line-height:38px;
+	text-align:center;
+	display: block;
+	margin-top: 10px;
+	&:hover{
+		color: #fff;
+		opacity: .9;
+	}
+}

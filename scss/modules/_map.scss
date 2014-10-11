@@ -1,0 +1,45 @@
+section.map,
+section.coverPhoto{
+	width: 100%;
+	height: 400px;
+	margin-bottom: 50px;
+	position: relative;
+}
+section.map{
+	background-color:#73b6e6;
+}
+
+.pin{
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	display: block;
+	padding-bottom: 10px;
+	.info{
+		color: #fff;
+		font-size: 14px;
+		line-height: 32px;
+		height: 32px;
+		border-radius: 16px;
+		background-color: #db554e;
+		padding: 0 20px;
+		text-align:center;
+		width: auto;
+		margin-top: 10px;
+		opacity: 0;
+	}
+	span{
+		display: block;
+		margin:0 auto;
+		width: 64px;
+		height: 92px;
+		@include background-image-retina('icon_map', 'png', 64px, 92px);
+	}
+	&:hover .info{
+		opacity: 1;
+	}
+}
+
+
+

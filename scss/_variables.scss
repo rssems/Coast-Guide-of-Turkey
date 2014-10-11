@@ -1,0 +1,36 @@
+/*------------------------------------*\
+    TYPOGRAPHY
+\*------------------------------------*/
+
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700&subset=latin,latin-ext);
+
+$sans-serif-font: 'Source Sans Pro', 'Helvetica Neue', Arial,  Helvetica, 'Liberation Sans', sans-serif;
+$serif-font: Georgia, Times, serif;
+$code-font: Menlo,Monaco,Consolas,"Courier New",monospace;
+
+$base-font-size: 16;
+$small-font-size: 14;
+$base-line-height: 1.4;
+
+
+/*------------------------------------*\
+    COLOR 
+\*------------------------------------*/
+
+$bg: white;
+$text-color: #333;
+
+// LINK
+$link-color: #333;
+$link-hover: #333;
+$link-visited: #333;
+
+
+/*------------------------------------*\
+    RESPONSIVE
+\*------------------------------------*/
+$desktopx-query: 1224px; // ve ustu
+$desktop-query: 1024px; // iPad Mini Yatay
+$tablet-query: 768px; // iPad Mini Dik
+$mobile-query: 640px; // iPhone 5S
+

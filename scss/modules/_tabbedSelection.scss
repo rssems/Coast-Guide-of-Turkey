@@ -1,0 +1,138 @@
+section.tabbedSelection{
+	width: 100%;
+	background-color:transparent;
+	padding:5% 0;
+	.grid{
+		position: relative;
+	}
+	h4.tabbedh4{
+		color: #152937;
+		font-size: 36px;
+		margin-bottom: 25px;
+		text-align: left;
+		font-weight: 300;
+		padding: 0 20px;
+		background-color:#fff;
+		position: relative;
+		z-index: 2;
+		float: left;
+		display: inline-block;
+	}
+	span.hr{
+		display: block;
+		width: 100%;
+		height: 1px;
+		background-color: #dde2e5;
+		position: absolute;
+		top: 33px;
+		left: 0;
+		z-index: 1;
+		margin-left: -20px;
+	}
+}
+
+
+.tabbedSelection .selectedPlaces li a h4, 
+.tabbedSelection .selectedPlaces li>div h4{
+	text-align:left;
+	padding-left: 10px;
+	padding-right: 75px;
+	@include uzama;
+}
+
+// adding ratings
+.rating{
+	position: absolute;
+	bottom: 13px;
+	right: 10px;
+	color: #919fab;
+	font-size: 14px;
+	font-weight: bold;
+	line-height:14px;
+
+	span{
+		width:16px;
+		height:16px;
+		@include background-image-retina('icon_rating', 'png', 16px, 16px);
+		display: inline-block;
+		vertical-align: top;
+		margin-right: 3px
+	}
+}
+
+
+.tabsOfSelection{
+	float: right;
+	margin: -3px;
+	margin-right: 20px;
+	li{
+		float: left;
+		a{
+			color: #919fab;
+			font-size: 14px;
+			font-weight: bold;
+			padding: 0 20px;
+			height:36px;
+			line-height: 36px;
+			display: block;
+			&.active,
+			&:hover{
+				background-color: #2fb16d;
+				color: #fff;
+			}
+		}
+	}
+}
+
+
+.showAll{
+	margin-top: 20px;
+	> div{
+		border-top:1px solid #dde2e5;
+	}
+	a{
+		width: 90px;
+		height: 30px;
+		background-color: #2fb16d;
+		text-align:center;
+		color: #fff;
+		font-size: 14px;
+		font-weight: bold;
+		line-height:30px;
+		display: block;
+		margin: 0 auto;
+		padding-right: 12px;
+		position: relative;
+		span{
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 5px 4.5px 0 4.5px;
+			border-color: white transparent transparent transparent;
+			display: inline-block;
+			position: absolute;
+			top: 12px;
+			right: 12px;
+		}
+	}
+}
+
+
+
+.writingsList{
+	padding: 20px;
+	li a{
+		margin-bottom: 30px;
+		display: block;
+		.title{
+			color: #0f85c1;
+			font-size: 18px;
+			font-weight: bold;
+			display: block;
+		}
+		.content{
+			color: #333;
+			font-size: 14px;
+		}
+	}
+}

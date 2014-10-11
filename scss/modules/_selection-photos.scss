@@ -1,0 +1,45 @@
+section.selection{
+	background-color:#fff;
+	padding: 4% 0;
+
+	h2{
+		color: #152937;
+		font-size: 36px;
+		font-weight: 300;
+		margin-left: 10px;
+		margin-bottom: 20px;
+		float: left;
+	}
+	.selectedPlaces li a{
+		padding-bottom: 0;
+	}
+}
+
+
+.btn_add{
+	display: block;
+	float: right;
+	width: 98px;
+	height: 40px;
+	background-color: #2fb16d;
+	color: #fefefe;
+	font-size: 14px;
+	font-weight: bold;
+	line-height:40px;
+	span{
+		width: 40px;
+		height: 40px;
+		background-color: #2a9f61;
+		font-size: 36px;
+		display: block;
+		float: left;
+		font-weight:500;
+	}
+	&:hover{
+		background-color:#2a9f61;
+		color: #fff;
+		span{
+			background-color:#2fb16d;
+		}
+	}
+}

@@ -1,0 +1,231 @@
+$header-height:64px;
+
+header{
+	width: 100%;
+	height: $header-height;
+	background-color: #fff;
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,.14);
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.14);
+	box-shadow: 0 1px 2px rgba(0,0,0,.14);
+	position: relative;
+	z-index: 102;
+	// overflow: hidden;
+	@include media-phone {
+		height: auto;
+		min-height: $header-height;
+	}
+	.grid{
+		overflow: visible;
+		position: relative;
+	}
+	h1{
+		float: left;
+		width: 248px;
+		height: 44px;
+		margin-top: 9px;
+		@include media-phone {
+			width: 100%;
+			display: block;
+			text-align: center;
+		}
+		a {
+			text-indent: -9999px;
+			display: block;
+			@include retina-sprite(logo, common);
+		}
+	}
+	.col-1-5.search{
+		float: left;
+		height: 30px;
+		border-left:1px solid #d4d8d9;
+		margin: 20px 0 0 20px;
+		@include media-phone {
+			border:none;
+			display: none;
+		}
+		form{
+			position: relative;
+
+			label{
+				width: 16px;
+				height: 16px;
+				position: absolute;
+				top: 6px;
+				left: 10px;
+
+				span {
+					width: 16px;
+					height: 16px;
+					display: inline-block;
+					@include retina-sprite(icn_search, common);
+				}
+			}
+			input{
+				border:none;
+				color: #92a0ab;
+				font-size: 16px;
+				height: 30px;
+				padding-left: 35px;
+				@include media-tablet {
+					font-size: 14px;
+				}
+				&:focus{
+					outline: none;
+				}
+			}
+
+			::-webkit-input-placeholder {
+			   color: #92a0ab;
+			}
+
+			:-moz-placeholder { /* Firefox 18- */
+			   color: #92a0ab;  
+			}
+
+			::-moz-placeholder {  /* Firefox 19+ */
+			   color: #92a0ab;  
+			}
+
+			:-ms-input-placeholder {  
+			   color: #92a0ab;  
+			}
+		} //form
+	} //col-1-5
+
+	.col-1-2.second{
+		float: right;
+		ul{
+			float: right;
+		}
+		li {
+			float: left;
+
+			> a{
+				color: #5f6d72;
+				font-weight: 600;
+				height: $header-height;
+				line-height: $header-height;
+				padding:4px 16px 0 16px;
+				display: block;
+				-webkit-transition: all 0.3s;
+				-moz-transition: all 0.3s;
+				transition: all 0.3s;
+				@include media-tablet {
+					padding: 4px 4px 0 4px;
+					margin: 0;
+					font-size: 14px;
+				}
+				@include media-phone {
+					padding: 4px 1px 0 1px;
+					margin: 0;
+					font-size: 14px;
+				}
+				&:hover{
+					background-color: darken(#fff, 1%)
+				}
+				&.active{
+					color: #0f85c2;
+				}
+			}
+		}
+		.sign a{
+			background-color:#2fb26d;
+			font-size:14px;
+			color:#fff;
+			margin-left: 15px;
+			padding-left: 46px;
+			position: relative;
+				@include media-phone {
+					padding:4px 6px 0 6px;
+					font-size: 12px;
+					margin: 0;
+				}
+				@include media-tablet {
+					padding:4px 4px 0 4px;
+					font-size: 12px;
+					margin: 0;
+				}
+				@include media-desktop {
+					padding-left:35px;
+				}
+				&:hover{
+					background-color: darken(#2fb26d, 5%)
+				}
+				span {
+					@include retina-sprite(icn_sign, common);
+					position: absolute;
+					top: 50%;
+					left: 20px;
+					margin-top: -4px;
+					@include media-phone {
+						display: none;
+					}
+					@include media-tablet {
+						display: none;
+					}
+					@include media-desktop {
+						left:10px;
+					}
+				}
+		}
+	} //.col-1-2
+
+} //header
+
+
+// logged in user
+
+.logged-in {
+	position: relative;
+}
+.logged-in > a{
+
+	border-left:1px solid #d3d7d9;
+	border-right:1px solid #d3d7d9;
+	display: block;
+	&:hover{
+		background-color: #f0f2f3;		
+	}
+	img{
+		width: 36px;
+		height: 36px;
+		border-radius:18px;
+		float: left;
+		margin-top: 15px;
+		margin-right: 5px;
+	}
+	span{
+		@include retina-sprite(arrow_down, common);
+	}
+
+}
+.profile-menu{
+	display: block;
+	position: absolute;
+	bottom:-166px;
+	right: 0;
+	width: 170px;
+	height: auto;
+	border: 1px solid rgba(6,88,120,.12);
+	background-color: #fff;
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,.16);
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.16);
+	box-shadow: 0 1px 2px rgba(0,0,0,.16);
+	z-index: 10;
+
+	li a{
+		display: block;
+		padding: 0 20px;
+		color: #333;
+		font-size: 14px;
+		width: 170px;
+		line-height: 41px;
+		height: 41px;
+		&:hover{
+			background-color: #f2f4f7;
+		}
+	}
+}
+@import "search-suggestions";
+
+

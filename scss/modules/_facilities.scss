@@ -1,0 +1,188 @@
+section.facilities{
+	width: 100%;
+	padding-top:3%;
+	h4{
+		color: #152937;
+		font-size: 36px;
+		margin-bottom: 25px;
+		text-align: left;
+		font-weight: 300;
+		display: inline-block;
+	}
+}
+.facilities .col-1-6{
+	padding-right: 20px;
+	margin-bottom: 20px;
+	.facilities-item{
+		position: relative;
+		width: 100%;
+		height: 148px;
+		border: 1px solid #dde2e5;
+		text-align: center;
+		display: block;
+		position: relative;
+		.facilities-iconWrapper{
+			width: 100%;
+			height: 50px;
+			margin-top: 45px;
+			line-height: 50px;
+			@include transition;
+			span{
+				@include transition;
+				display: inline-block;
+				vertical-align: middle;
+			}
+		}
+		.facilities-name{
+			color: #919fab;
+			font-size: 14px;
+			font-weight: bold;
+			width: 100%;
+			margin-top: 5px;
+			opacity: 0;
+			@include transition;
+		}
+		&:hover{
+			.facilities-iconWrapper span{
+				margin-top: -15px;
+			}
+			.facilities-name{
+				opacity: 1;
+			}
+		}
+	}
+}
+
+
+
+
+// icons
+@include retina-sprite-add(imkanlar, "sprites/imkanlar/*.png", "sprites-retina/imkanlar/*.png");
+
+span.icon-bank_atm{
+	@include retina-sprite(icon-bank_atm, imkanlar);
+}
+span.icon-boatsale{
+	@include retina-sprite(icon-boatsale, imkanlar);
+}
+span.icon-cargo{
+	@include retina-sprite(icon-cargo, imkanlar);
+}
+span.icon-charter{
+	@include retina-sprite(icon-charter, imkanlar);
+}
+span.icon-coastguard{
+	@include retina-sprite(icon-coastguard, imkanlar);
+}
+span.icon-custom{
+	@include retina-sprite(icon-custom, imkanlar);
+}
+span.icon-divingschool{
+	@include retina-sprite(icon-divingschool, imkanlar);
+}
+span.icon-e{
+	@include retina-sprite(icon-e, imkanlar);
+}
+span.icon-electricity{
+	@include retina-sprite(icon-electricity, imkanlar);
+}
+span.icon-fuel{
+	@include retina-sprite(icon-fuel, imkanlar);
+}
+span.icon-gas{
+	@include retina-sprite(icon-gas, imkanlar);
+}
+span.icon-heath{
+	@include retina-sprite(icon-heath, imkanlar);
+}
+span.icon-historicsite{
+	@include retina-sprite(icon-historicsite, imkanlar);
+}
+span.icon-hotel{
+	@include retina-sprite(icon-hotel, imkanlar);
+}
+span.icon-ice{
+	@include retina-sprite(icon-ice, imkanlar);
+}
+span.icon-internet{
+	@include retina-sprite(icon-internet, imkanlar);
+}
+span.icon-laundry{
+	@include retina-sprite(icon-laundry, imkanlar);
+}
+span.icon-market{
+	@include retina-sprite(icon-market, imkanlar);
+}
+span.icon-pharmacy{
+	@include retina-sprite(icon-pharmacy, imkanlar);
+}
+span.icon-police{
+	@include retina-sprite(icon-police, imkanlar);
+}
+span.icon-restaurant{
+	@include retina-sprite(icon-restaurant, imkanlar);
+}
+span.icon-sailingschool{
+	@include retina-sprite(icon-sailingschool, imkanlar);
+}
+span.icon-slipway{
+	@include retina-sprite(icon-slipway, imkanlar);
+}
+span.icon-sports{
+	@include retina-sprite(icon-sports, imkanlar);
+}
+span.icon-technicalmaterial{
+	@include retina-sprite(icon-technicalmaterial, imkanlar);
+}
+span.icon-technicalworkshop{
+	@include retina-sprite(icon-technicalworkshop, imkanlar);
+}
+span.icon-transportation{
+	@include retina-sprite(icon-transportation, imkanlar);
+}
+span.icon-waste{
+	@include retina-sprite(icon-waste, imkanlar);
+}
+span.icon-water{
+	@include retina-sprite(icon-water, imkanlar);
+}
+
+
+
+// showmore-facilities
+
+.showmore-facilities{
+	display: block;
+	margin:3% auto;
+	border-top:1px solid #dde2e5;
+	position: relative;
+	float:none;
+	a{
+		width: 90px;
+		height: 30px;
+		background-color: #2fb16d;
+		line-height: 30px;
+		text-align: center;
+		position: absolute;
+		top: 0;
+		left: 50%;
+		margin-left:-45px;
+		color: #fff;
+		font-size: 14px;
+		font-weight: bold;
+		span{
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 5px 4.5px 0 4.5px;
+			border-color: #ffffff transparent transparent transparent;
+			display: inline-block;
+			vertical-align:middle;
+			margin-top: -2px;
+			margin-left: 3px;
+		}
+	}
+}	
+
+
+@import "modules/expanded";
