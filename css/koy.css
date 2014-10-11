@@ -566,7 +566,22 @@ code, kbd, pre, samp {
 
 /* COMMON SPRITE
    ============================================== */
-/* line 75, ../scss/_global.scss */
+/* line 72, ../scss/_global.scss */
+.relative {
+  position: relative; }
+
+/* line 76, ../scss/_global.scss */
+.transparent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: 2;
+  background-image: url("../images/transparent.png"); }
+
+/* line 88, ../scss/_global.scss */
 .feedbackButton {
   width: 48px;
   height: 158px;
@@ -583,10 +598,10 @@ code, kbd, pre, samp {
   -o-transition: All 0.4s ease;
   -ms-transition: All 0.4s ease;
   transition: All 0.4s ease; }
-  /* line 87, ../scss/_global.scss */
+  /* line 100, ../scss/_global.scss */
   .feedbackButton:hover {
     width: 58px; }
-  /* line 90, ../scss/_global.scss */
+  /* line 103, ../scss/_global.scss */
   .feedbackButton span {
     display: inline-block;
     background-image: url('../images/sprites/common-sfdad18f06c.png');
@@ -603,7 +618,7 @@ code, kbd, pre, samp {
      */
     margin: 32px 0 0 17px; }
     @media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3 / 2), (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
-      /* line 90, ../scss/_global.scss */
+      /* line 103, ../scss/_global.scss */
       .feedbackButton span {
         background-image: url('../images/sprites-retina/common-s5fc008740d.png');
         -moz-background-size: 248px auto;
@@ -4329,16 +4344,16 @@ section.notes .bx-pager-item {
     .pagination li .noHoverEffect {
       background-color: transparent !important; }
 
-/* line 19, ../scss/koy.scss */
+/* line 20, ../scss/koy.scss */
 section.coverPhoto {
   position: relative;
   overflow: hidden; }
-  /* line 22, ../scss/koy.scss */
+  /* line 23, ../scss/koy.scss */
   section.coverPhoto .grid {
     position: relative;
     display: block;
     margin-top: -60px; }
-  /* line 27, ../scss/koy.scss */
+  /* line 28, ../scss/koy.scss */
   section.coverPhoto .allPhotosLink {
     display: block;
     height: 38px;
@@ -4349,10 +4364,10 @@ section.coverPhoto {
     color: #fefefe;
     font-size: 14px;
     font-weight: bold; }
-    /* line 37, ../scss/koy.scss */
+    /* line 38, ../scss/koy.scss */
     section.coverPhoto .allPhotosLink:hover {
       background-color: #065878; }
-    /* line 40, ../scss/koy.scss */
+    /* line 41, ../scss/koy.scss */
     section.coverPhoto .allPhotosLink span {
       display: inline-block;
       background-image: url('../images/sprites/koy-sb5ac80ab2c.png');
@@ -4372,7 +4387,7 @@ section.coverPhoto {
       vertical-align: middle;
       margin-top: -3px; }
       @media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3 / 2), (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
-        /* line 40, ../scss/koy.scss */
+        /* line 41, ../scss/koy.scss */
         section.coverPhoto .allPhotosLink span {
           background-image: url('../images/sprites-retina/koy-sa2efc9d4d4.png');
           -moz-background-size: 119px auto;
@@ -4381,28 +4396,28 @@ section.coverPhoto {
           background-size: 119px auto;
           background-position: 0 -36px; } }
 
-/* line 49, ../scss/koy.scss */
+/* line 50, ../scss/koy.scss */
 article.welcome2 p:first-of-type {
   font-size: 14px !important; }
 
-/* line 55, ../scss/koy.scss */
+/* line 56, ../scss/koy.scss */
 section.info .grid {
   padding-left: 90px; }
-  /* line 57, ../scss/koy.scss */
+  /* line 58, ../scss/koy.scss */
   section.info .grid .top {
     display: block;
     border-bottom: 1px solid #dde2e5; }
-  /* line 62, ../scss/koy.scss */
+  /* line 63, ../scss/koy.scss */
   section.info .grid h1 {
     color: #333;
     font-size: 30px;
     font-weight: bold;
     float: left;
     margin-bottom: 25px; }
-  /* line 69, ../scss/koy.scss */
+  /* line 70, ../scss/koy.scss */
   section.info .grid .score {
     border-right: 1px solid #dde2e5; }
-  /* line 73, ../scss/koy.scss */
+  /* line 74, ../scss/koy.scss */
   section.info .grid .scroreCount {
     width: 40px;
     height: 40px;
@@ -4415,33 +4430,33 @@ section.info .grid {
     line-height: 40px;
     float: left;
     margin-right: 15px; }
-  /* line 86, ../scss/koy.scss */
+  /* line 87, ../scss/koy.scss */
   section.info .grid .scoreStars {
     position: relative;
     float: left;
     margin-top: 9px; }
-    /* line 90, ../scss/koy.scss */
+    /* line 91, ../scss/koy.scss */
     section.info .grid .scoreStars .fullWrapper {
       position: absolute;
       top: 0;
       left: 0;
       overflow: hidden;
       height: 16px; }
-      /* line 96, ../scss/koy.scss */
+      /* line 97, ../scss/koy.scss */
       section.info .grid .scoreStars .fullWrapper .fullWrapperAgain {
         width: 90px;
         height: 22px; }
-  /* line 102, ../scss/koy.scss */
+  /* line 103, ../scss/koy.scss */
   section.info .grid .oyver {
     color: #919fab;
     font-size: 14px;
     line-height: 35px;
     margin-left: 15px;
     cursor: pointer; }
-    /* line 108, ../scss/koy.scss */
+    /* line 109, ../scss/koy.scss */
     section.info .grid .oyver:hover {
       color: #222; }
-  /* line 112, ../scss/koy.scss */
+  /* line 113, ../scss/koy.scss */
   section.info .grid span.icon-starFull {
     display: inline-block;
     background-image: url('../images/sprites/star-s51349b2cc3.png');
@@ -4457,7 +4472,7 @@ section.info .grid {
      * Set to `1` to turn on support.
      */ }
     @media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3 / 2), (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
-      /* line 112, ../scss/koy.scss */
+      /* line 113, ../scss/koy.scss */
       section.info .grid span.icon-starFull {
         background-image: url('../images/sprites-retina/star-s700e51c030.png');
         -moz-background-size: 16px auto;
@@ -4465,7 +4480,7 @@ section.info .grid {
         -webkit-background-size: 16px auto;
         background-size: 16px auto;
         background-position: 0 -18px; } }
-  /* line 115, ../scss/koy.scss */
+  /* line 116, ../scss/koy.scss */
   section.info .grid span.icon-starEmty {
     display: inline-block;
     background-image: url('../images/sprites/star-s51349b2cc3.png');
@@ -4481,7 +4496,7 @@ section.info .grid {
      * Set to `1` to turn on support.
      */ }
     @media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3 / 2), (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
-      /* line 115, ../scss/koy.scss */
+      /* line 116, ../scss/koy.scss */
       section.info .grid span.icon-starEmty {
         background-image: url('../images/sprites-retina/star-s700e51c030.png');
         -moz-background-size: 16px auto;
@@ -4489,10 +4504,10 @@ section.info .grid {
         -webkit-background-size: 16px auto;
         background-size: 16px auto;
         background-position: 0 0; } }
-  /* line 118, ../scss/koy.scss */
+  /* line 119, ../scss/koy.scss */
   section.info .grid .bottom {
     margin-top: 10px; }
-    /* line 120, ../scss/koy.scss */
+    /* line 121, ../scss/koy.scss */
     section.info .grid .bottom .infoItem, section.info .grid .bottom a {
       margin-bottom: 30px;
       color: #333;
@@ -4500,7 +4515,7 @@ section.info .grid {
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis; }
-      /* line 122, ../scss/koy.scss */
+      /* line 123, ../scss/koy.scss */
       section.info .grid .bottom .infoItem span, section.info .grid .bottom a span {
         display: block;
         color: #919fab;
@@ -4510,7 +4525,7 @@ section.info .grid {
         overflow: hidden;
         text-overflow: ellipsis; }
 
-/* line 136, ../scss/koy.scss */
+/* line 137, ../scss/koy.scss */
 .btn_add {
   display: block;
   float: right;
@@ -4522,13 +4537,13 @@ section.info .grid {
   font-weight: bold;
   line-height: 40px;
   padding-right: 30px; }
-  /* line 147, ../scss/koy.scss */
+  /* line 148, ../scss/koy.scss */
   .btn_add.right {
     margin-right: 10px; }
-  /* line 150, ../scss/koy.scss */
+  /* line 151, ../scss/koy.scss */
   .btn_add:hover {
     color: #fff; }
-  /* line 153, ../scss/koy.scss */
+  /* line 154, ../scss/koy.scss */
   .btn_add > span {
     width: 40px;
     height: 40px;
@@ -4536,7 +4551,7 @@ section.info .grid {
     display: block;
     float: left;
     margin-right: 30px; }
-    /* line 160, ../scss/koy.scss */
+    /* line 161, ../scss/koy.scss */
     .btn_add > span span {
       display: inline-block;
       background-image: url('../images/sprites/koy-sb5ac80ab2c.png');
@@ -4554,7 +4569,7 @@ section.info .grid {
       margin: 12px auto;
       display: block; }
       @media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3 / 2), (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
-        /* line 160, ../scss/koy.scss */
+        /* line 161, ../scss/koy.scss */
         .btn_add > span span {
           background-image: url('../images/sprites-retina/koy-sa2efc9d4d4.png');
           -moz-background-size: 119px auto;
@@ -4562,13 +4577,13 @@ section.info .grid {
           -webkit-background-size: 119px auto;
           background-size: 119px auto;
           background-position: 0 -18px; } }
-  /* line 166, ../scss/koy.scss */
+  /* line 167, ../scss/koy.scss */
   .btn_add.checked {
     background-color: #2fb16d; }
-    /* line 168, ../scss/koy.scss */
+    /* line 169, ../scss/koy.scss */
     .btn_add.checked > span {
       background-color: #2a9f61; }
-      /* line 170, ../scss/koy.scss */
+      /* line 171, ../scss/koy.scss */
       .btn_add.checked > span span {
         display: inline-block;
         background-image: url('../images/sprites/koy-sb5ac80ab2c.png');
@@ -4586,7 +4601,7 @@ section.info .grid {
         margin: 12px auto;
         display: block; }
         @media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3 / 2), (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
-          /* line 170, ../scss/koy.scss */
+          /* line 171, ../scss/koy.scss */
           .btn_add.checked > span span {
             background-image: url('../images/sprites-retina/koy-sa2efc9d4d4.png');
             -moz-background-size: 119px auto;
@@ -4594,10 +4609,10 @@ section.info .grid {
             -webkit-background-size: 119px auto;
             background-size: 119px auto;
             background-position: 0 -54px; } }
-  /* line 177, ../scss/koy.scss */
+  /* line 178, ../scss/koy.scss */
   .btn_add.addNote > span {
     margin-right: 5px; }
-    /* line 179, ../scss/koy.scss */
+    /* line 180, ../scss/koy.scss */
     .btn_add.addNote > span span {
       display: inline-block;
       background-image: url('../images/sprites/koy-sb5ac80ab2c.png');
@@ -4615,7 +4630,7 @@ section.info .grid {
       margin: 12px auto;
       display: block; }
       @media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3 / 2), (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
-        /* line 179, ../scss/koy.scss */
+        /* line 180, ../scss/koy.scss */
         .btn_add.addNote > span span {
           background-image: url('../images/sprites-retina/koy-sa2efc9d4d4.png');
           -moz-background-size: 119px auto;
@@ -4624,7 +4639,7 @@ section.info .grid {
           background-size: 119px auto;
           background-position: 0 0; } }
 
-/* line 188, ../scss/koy.scss */
+/* line 189, ../scss/koy.scss */
 .allPhotosLinkSelect span {
   display: inline-block;
   background-image: url('../images/sprites/koy-sb5ac80ab2c.png');
@@ -4643,7 +4658,7 @@ section.info .grid {
   vertical-align: middle;
   margin-top: -4px; }
   @media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3 / 2), (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
-    /* line 188, ../scss/koy.scss */
+    /* line 189, ../scss/koy.scss */
     .allPhotosLinkSelect span {
       background-image: url('../images/sprites-retina/koy-sa2efc9d4d4.png');
       -moz-background-size: 119px auto;
@@ -4652,7 +4667,7 @@ section.info .grid {
       background-size: 119px auto;
       background-position: 0 -36px; } }
 
-/* line 195, ../scss/koy.scss */
+/* line 196, ../scss/koy.scss */
 .allPhotosLinkTop,
 .allPhotosLinkTop span {
   height: 3px;
@@ -4665,10 +4680,10 @@ section.info .grid {
   border: 1px solid #dde2e5;
   border-bottom: 0; }
 
-/* line 208, ../scss/koy.scss */
+/* line 209, ../scss/koy.scss */
 .commentsAreaKoy {
   padding: 1% 0; }
-  /* line 210, ../scss/koy.scss */
+  /* line 211, ../scss/koy.scss */
   .commentsAreaKoy h4 {
     color: #152937;
     font-size: 36px;
@@ -4680,18 +4695,18 @@ section.info .grid {
     z-index: 2;
     float: left;
     display: inline-block; }
-    /* line 222, ../scss/koy.scss */
+    /* line 223, ../scss/koy.scss */
     .commentsAreaKoy h4 span {
       font-size: 24px; }
-      /* line 224, ../scss/koy.scss */
+      /* line 225, ../scss/koy.scss */
       .commentsAreaKoy h4 span:before {
         content: "("; }
-      /* line 227, ../scss/koy.scss */
+      /* line 228, ../scss/koy.scss */
       .commentsAreaKoy h4 span:after {
         content: ")"; }
-  /* line 233, ../scss/koy.scss */
+  /* line 234, ../scss/koy.scss */
   .commentsAreaKoy .col-1-2.first {
     padding-right: 5%; }
-    /* line 235, ../scss/koy.scss */
+    /* line 236, ../scss/koy.scss */
     .commentsAreaKoy .col-1-2.first textarea {
       height: 150px; }
