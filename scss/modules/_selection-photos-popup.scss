@@ -83,5 +83,28 @@
 	margin: 0 auto;
 }
 
-
-
+.socialLinks.active li a{
+	margin-bottom: 5px;
+}
+.icn-arrow{
+	cursor:pointer;
+	position: absolute;
+	top: 50%;
+	z-index: 3;
+	background-repeat:no-repeat;
+	width: 37px;
+	height: 57px;
+	margin-top:-29px;
+	opacity: 0.5;
+	&.left{
+		@include background-image-retina('arrow-left', 'png', 37px, 57px);
+		left: 10px;
+	}
+	&.right{
+		@include background-image-retina('arrow-right', 'png', 37px, 57px);
+		right: 10px;
+	}
+	&:hover{
+		opacity: 1;
+	}
+}

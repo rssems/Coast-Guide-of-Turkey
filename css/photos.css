@@ -2373,6 +2373,49 @@ section.selection {
   max-width: 100%;
   margin: 0 auto; }
 
+/* line 86, ../scss/modules/_selection-photos-popup.scss */
+.socialLinks.active li a {
+  margin-bottom: 5px !important; }
+
+/* line 89, ../scss/modules/_selection-photos-popup.scss */
+.icn-arrow {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  z-index: 3;
+  background-repeat: no-repeat;
+  width: 37px;
+  height: 57px;
+  margin-top: -29px;
+  opacity: 0.5; }
+  /* line 99, ../scss/modules/_selection-photos-popup.scss */
+  .icn-arrow.left {
+    background-image: url("../images/arrow-left.png");
+    left: 10px; }
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 144dpi) {
+      /* line 68, ../scss/help/_mixins.scss */
+      .icn-arrow.left {
+        background-image: url("../images/arrow-left@2x.png");
+        -webkit-background-size: 37px 57px;
+        -moz-background-size: 37px 57px;
+        -o-background-size: 37px 57px;
+        background-size: 37px 57px; } }
+  /* line 103, ../scss/modules/_selection-photos-popup.scss */
+  .icn-arrow.right {
+    background-image: url("../images/arrow-right.png");
+    right: 10px; }
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 144dpi) {
+      /* line 68, ../scss/help/_mixins.scss */
+      .icn-arrow.right {
+        background-image: url("../images/arrow-right@2x.png");
+        -webkit-background-size: 37px 57px;
+        -moz-background-size: 37px 57px;
+        -o-background-size: 37px 57px;
+        background-size: 37px 57px; } }
+  /* line 107, ../scss/modules/_selection-photos-popup.scss */
+  .icn-arrow:hover {
+    opacity: 1; }
+
 /* line 1, ../scss/modules/_comments.scss */
 .comments {
   overflow: scroll; }
