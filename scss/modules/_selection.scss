@@ -88,6 +88,12 @@ section.selection{
 	}
 	&:hover span.photoWrap:before{
 		display: block;
+		@include media-phone{
+			display: none;
+		}
+		@include media-tablet {
+			display: none;
+		}
 	}
 	h4{
 		width: 100%;
@@ -116,6 +122,12 @@ section.selection{
 	}
 	&:hover .go{
 		display: block;
+		@include media-phone{
+			display: none;
+		}
+		@include media-tablet {
+			display: none;
+		}
 	}
 }
 .selectedPlaces.koy li a, 
@@ -183,3 +195,5 @@ section.selection{
 .allPhotosLinkSelection:hover .allPhotosLinkSelect{
 	opacity: 0;
 }
+
+

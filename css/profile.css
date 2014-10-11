@@ -1862,7 +1862,17 @@ section.selection {
   .selectedPlaces li a:hover span.photoWrap:before,
   .selectedPlaces li > div:hover span.photoWrap:before {
     display: block; }
-  /* line 92, ../scss/modules/_selection.scss */
+    @media all and (max-width: 640px) {
+      /* line 89, ../scss/modules/_selection.scss */
+      .selectedPlaces li a:hover span.photoWrap:before,
+      .selectedPlaces li > div:hover span.photoWrap:before {
+        display: none; } }
+    @media all and (min-width: 768px) and (max-width: 1023px) {
+      /* line 89, ../scss/modules/_selection.scss */
+      .selectedPlaces li a:hover span.photoWrap:before,
+      .selectedPlaces li > div:hover span.photoWrap:before {
+        display: none; } }
+  /* line 98, ../scss/modules/_selection.scss */
   .selectedPlaces li a h4,
   .selectedPlaces li > div h4 {
     width: 100%;
@@ -1876,11 +1886,11 @@ section.selection {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis; }
-  /* line 103, ../scss/modules/_selection.scss */
+  /* line 109, ../scss/modules/_selection.scss */
   .selectedPlaces li a:hover h4,
   .selectedPlaces li > div:hover h4 {
     color: #0f85c1; }
-  /* line 106, ../scss/modules/_selection.scss */
+  /* line 112, ../scss/modules/_selection.scss */
   .selectedPlaces li a .go,
   .selectedPlaces li > div .go {
     display: inline-block;
@@ -1905,7 +1915,7 @@ section.selection {
     margin: -38px 0 0 -28px;
     z-index: 3; }
     @media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3 / 2), (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
-      /* line 106, ../scss/modules/_selection.scss */
+      /* line 112, ../scss/modules/_selection.scss */
       .selectedPlaces li a .go,
       .selectedPlaces li > div .go {
         background-image: url('../images/sprites-retina/common-s5fc008740d.png');
@@ -1914,53 +1924,63 @@ section.selection {
         -webkit-background-size: 248px auto;
         background-size: 248px auto;
         background-position: 0 0; } }
-  /* line 117, ../scss/modules/_selection.scss */
+  /* line 123, ../scss/modules/_selection.scss */
   .selectedPlaces li a:hover .go,
   .selectedPlaces li > div:hover .go {
     display: block; }
+    @media all and (max-width: 640px) {
+      /* line 123, ../scss/modules/_selection.scss */
+      .selectedPlaces li a:hover .go,
+      .selectedPlaces li > div:hover .go {
+        display: none; } }
+    @media all and (min-width: 768px) and (max-width: 1023px) {
+      /* line 123, ../scss/modules/_selection.scss */
+      .selectedPlaces li a:hover .go,
+      .selectedPlaces li > div:hover .go {
+        display: none; } }
 
-/* line 121, ../scss/modules/_selection.scss */
+/* line 133, ../scss/modules/_selection.scss */
 .selectedPlaces.koy li a,
 .selectedPlaces.koy li > div {
   padding-bottom: 0; }
 
-/* line 127, ../scss/modules/_selection.scss */
+/* line 139, ../scss/modules/_selection.scss */
 .selectedPlaces li > div:hover span.photoWrap:before,
 .selectedPlaces li > div:hover .go {
   display: none; }
-/* line 131, ../scss/modules/_selection.scss */
+/* line 143, ../scss/modules/_selection.scss */
 .selectedPlaces li > div:hover h4 {
   color: #152937; }
 
-/* line 135, ../scss/modules/_selection.scss */
+/* line 147, ../scss/modules/_selection.scss */
 .selectedPlaces li.left,
 .selectedPlaces li.right {
   opacity: .5;
   position: absolute;
   top: 0; }
   @media all and (max-width: 640px) {
-    /* line 135, ../scss/modules/_selection.scss */
+    /* line 147, ../scss/modules/_selection.scss */
     .selectedPlaces li.left,
     .selectedPlaces li.right {
       display: none; } }
 
-/* line 145, ../scss/modules/_selection.scss */
+/* line 157, ../scss/modules/_selection.scss */
 .selectedPlaces li.left {
   left: -25%; }
 
-/* line 148, ../scss/modules/_selection.scss */
+/* line 160, ../scss/modules/_selection.scss */
 .selectedPlaces li.right {
   right: -25%; }
 
-/* line 151, ../scss/modules/_selection.scss */
+/* line 163, ../scss/modules/_selection.scss */
 .selectedPlaces li.left.second {
   left: -50%; }
 
-/* line 154, ../scss/modules/_selection.scss */
+/* line 166, ../scss/modules/_selection.scss */
 .selectedPlaces li.right.second {
   right: -50%; }
 
-/* line 161, ../scss/modules/_selection.scss */
+/* line 173, ../scss/modules/_selection.scss */
 .allPhotosLinkSelect {
   width: 100%;
   text-align: center;
@@ -1973,16 +1993,16 @@ section.selection {
   font-size: 14px;
   z-index: 10; }
 
-/* line 176, ../scss/modules/_selection.scss */
+/* line 188, ../scss/modules/_selection.scss */
 .allPhotosLinkSelection img {
   width: 33% !important;
   float: left; }
 
-/* line 180, ../scss/modules/_selection.scss */
+/* line 192, ../scss/modules/_selection.scss */
 .allPhotosLinkSelection span.photoWrap:before {
   display: block !important; }
 
-/* line 183, ../scss/modules/_selection.scss */
+/* line 195, ../scss/modules/_selection.scss */
 .allPhotosLinkSelection:hover .allPhotosLinkSelect {
   opacity: 0; }
 
