@@ -612,13 +612,6 @@ code, kbd, pre, samp {
         background-size: 248px auto;
         background-position: 0 -456px; } }
 
-/* line 99, ../scss/_global.scss */
-.scrollPopup {
-  position: fixed;
-  z-index: 100;
-  bottom: 0;
-  right: 0; }
-
 /*
   Simple Grid
   Learn More - http://dallasbass.com/simple-grid-a-lightweight-responsive-css-grid/
@@ -1626,6 +1619,73 @@ footer .language {
   .socialLinks.active li a {
     width: 50px;
     height: 50px; }
+
+/* line 2, ../scss/modules/_ad.scss */
+.scrollPopup {
+  position: fixed;
+  z-index: 100;
+  bottom: 0;
+  right: -400px;
+  -webkit-transition: All 0.4s ease;
+  -moz-transition: All 0.4s ease;
+  -o-transition: All 0.4s ease;
+  -ms-transition: All 0.4s ease;
+  transition: All 0.4s ease; }
+  /* line 12, ../scss/modules/_ad.scss */
+  .scrollPopup.active {
+    right: 0; }
+  /* line 15, ../scss/modules/_ad.scss */
+  .scrollPopup .close {
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    width: 30px;
+    height: 30px;
+    background-color: black;
+    border-radius: 15px;
+    opacity: 0.5; }
+    /* line 23, ../scss/modules/_ad.scss */
+    .scrollPopup .close.orta {
+      left: -15px;
+      top: -15px; }
+    /* line 27, ../scss/modules/_ad.scss */
+    .scrollPopup .close.dis {
+      left: -35px;
+      top: -35px; }
+    /* line 31, ../scss/modules/_ad.scss */
+    .scrollPopup .close span {
+      display: block;
+      margin-top: 7.5px;
+      margin-left: 7.5px;
+      background-image: url("../images/btn_close.png");
+      background-repeat: no-repeat;
+      width: 15px;
+      height: 15px;
+      -webkit-transition: All 0.4s ease;
+      -moz-transition: All 0.4s ease;
+      -o-transition: All 0.4s ease;
+      -ms-transition: All 0.4s ease;
+      transition: All 0.4s ease; }
+      @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 144dpi) {
+        /* line 68, ../scss/help/_mixins.scss */
+        .scrollPopup .close span {
+          background-image: url("../images/btn_close@2x.png");
+          -webkit-background-size: 15px 15px;
+          -moz-background-size: 15px 15px;
+          -o-background-size: 15px 15px;
+          background-size: 15px 15px; } }
+    /* line 42, ../scss/modules/_ad.scss */
+    .scrollPopup .close:hover {
+      opacity: 1; }
+  /* line 46, ../scss/modules/_ad.scss */
+  .scrollPopup .scrollPopup-Content {
+    width: 350px;
+    height: 250px;
+    display: block;
+    z-index: 1; }
+    /* line 51, ../scss/modules/_ad.scss */
+    .scrollPopup .scrollPopup-Content a {
+      display: block; }
 
 /*------------------------------------*\
     VENDOR

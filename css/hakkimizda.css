@@ -612,13 +612,6 @@ code, kbd, pre, samp {
         background-size: 248px auto;
         background-position: 0 -456px; } }
 
-/* line 99, ../scss/_global.scss */
-.scrollPopup {
-  position: fixed;
-  z-index: 100;
-  bottom: 0;
-  right: 0; }
-
 /*
   Simple Grid
   Learn More - http://dallasbass.com/simple-grid-a-lightweight-responsive-css-grid/
@@ -1627,6 +1620,73 @@ footer .language {
     width: 50px;
     height: 50px; }
 
+/* line 2, ../scss/modules/_ad.scss */
+.scrollPopup {
+  position: fixed;
+  z-index: 100;
+  bottom: 0;
+  right: -400px;
+  -webkit-transition: All 0.4s ease;
+  -moz-transition: All 0.4s ease;
+  -o-transition: All 0.4s ease;
+  -ms-transition: All 0.4s ease;
+  transition: All 0.4s ease; }
+  /* line 12, ../scss/modules/_ad.scss */
+  .scrollPopup.active {
+    right: 0; }
+  /* line 15, ../scss/modules/_ad.scss */
+  .scrollPopup .close {
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    width: 30px;
+    height: 30px;
+    background-color: black;
+    border-radius: 15px;
+    opacity: 0.5; }
+    /* line 23, ../scss/modules/_ad.scss */
+    .scrollPopup .close.orta {
+      left: -15px;
+      top: -15px; }
+    /* line 27, ../scss/modules/_ad.scss */
+    .scrollPopup .close.dis {
+      left: -35px;
+      top: -35px; }
+    /* line 31, ../scss/modules/_ad.scss */
+    .scrollPopup .close span {
+      display: block;
+      margin-top: 7.5px;
+      margin-left: 7.5px;
+      background-image: url("../images/btn_close.png");
+      background-repeat: no-repeat;
+      width: 15px;
+      height: 15px;
+      -webkit-transition: All 0.4s ease;
+      -moz-transition: All 0.4s ease;
+      -o-transition: All 0.4s ease;
+      -ms-transition: All 0.4s ease;
+      transition: All 0.4s ease; }
+      @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 144dpi) {
+        /* line 68, ../scss/help/_mixins.scss */
+        .scrollPopup .close span {
+          background-image: url("../images/btn_close@2x.png");
+          -webkit-background-size: 15px 15px;
+          -moz-background-size: 15px 15px;
+          -o-background-size: 15px 15px;
+          background-size: 15px 15px; } }
+    /* line 42, ../scss/modules/_ad.scss */
+    .scrollPopup .close:hover {
+      opacity: 1; }
+  /* line 46, ../scss/modules/_ad.scss */
+  .scrollPopup .scrollPopup-Content {
+    width: 350px;
+    height: 250px;
+    display: block;
+    z-index: 1; }
+    /* line 51, ../scss/modules/_ad.scss */
+    .scrollPopup .scrollPopup-Content a {
+      display: block; }
+
 /*------------------------------------*\
     VENDOR
 \*------------------------------------*/
@@ -1794,7 +1854,8 @@ section.newUsers {
   position: relative;
   margin-bottom: 40px;
   width: 100%;
-  display: block; }
+  display: block;
+  height: 180px; }
   /* line 4, ../scss/help/_mixins.scss */
   .newUsersList:before, .newUsersList:after {
     content: " ";
@@ -1805,23 +1866,23 @@ section.newUsers {
   /* line 15, ../scss/help/_mixins.scss */
   .newUsersList {
     *zoom: 1; }
-  /* line 26, ../scss/modules/_newUsers.scss */
+  /* line 27, ../scss/modules/_newUsers.scss */
   .newUsersList li {
     margin-bottom: 20px; }
     @media all and (max-width: 640px) {
-      /* line 26, ../scss/modules/_newUsers.scss */
+      /* line 27, ../scss/modules/_newUsers.scss */
       .newUsersList li {
         width: 33%;
         float: left; } }
-    /* line 32, ../scss/modules/_newUsers.scss */
+    /* line 33, ../scss/modules/_newUsers.scss */
     .newUsersList li a {
       display: block; }
-      /* line 38, ../scss/modules/_newUsers.scss */
+      /* line 39, ../scss/modules/_newUsers.scss */
       .newUsersList li a img {
         border-radius: 100%;
         margin-left: 20px; }
 
-/* line 46, ../scss/modules/_newUsers.scss */
+/* line 47, ../scss/modules/_newUsers.scss */
 .joinNow {
   float: right;
   display: inline-block;
@@ -1835,19 +1896,19 @@ section.newUsers {
   line-height: 42px;
   border: 2px solid #152937;
   background-color: rgba(255, 255, 255, 0.04); }
-  /* line 59, ../scss/modules/_newUsers.scss */
+  /* line 60, ../scss/modules/_newUsers.scss */
   .joinNow:hover {
     background-color: #152937;
     color: #fff; }
 
-/* line 68, ../scss/modules/_newUsers.scss */
+/* line 69, ../scss/modules/_newUsers.scss */
 .animated, .newUsersList li a {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both; }
 
-/* line 76, ../scss/modules/_newUsers.scss */
+/* line 77, ../scss/modules/_newUsers.scss */
 .bounce, .newUsersList li a:hover {
   -webkit-animation-name: bounce;
   animation-name: bounce; }
@@ -1875,33 +1936,33 @@ section.newUsers {
     -webkit-transform: translateY(-15px);
     -ms-transform: translateY(-15px);
     transform: translateY(-15px); } }
-/* line 119, ../scss/modules/_newUsers.scss */
+/* line 120, ../scss/modules/_newUsers.scss */
 section.aboutUsPage {
   text-align: center; }
-  /* line 121, ../scss/modules/_newUsers.scss */
+  /* line 122, ../scss/modules/_newUsers.scss */
   section.aboutUsPage h4 {
     text-align: center; }
-  /* line 124, ../scss/modules/_newUsers.scss */
+  /* line 125, ../scss/modules/_newUsers.scss */
   section.aboutUsPage a {
     margin: 5% 0; }
-    /* line 126, ../scss/modules/_newUsers.scss */
+    /* line 127, ../scss/modules/_newUsers.scss */
     section.aboutUsPage a img {
       display: inline-block; }
-    /* line 129, ../scss/modules/_newUsers.scss */
+    /* line 130, ../scss/modules/_newUsers.scss */
     section.aboutUsPage a span {
       width: 100%;
       display: block; }
-      /* line 132, ../scss/modules/_newUsers.scss */
+      /* line 133, ../scss/modules/_newUsers.scss */
       section.aboutUsPage a span.name {
         color: #333;
         font-size: 18px; }
-      /* line 136, ../scss/modules/_newUsers.scss */
+      /* line 137, ../scss/modules/_newUsers.scss */
       section.aboutUsPage a span.title {
         color: #919fab;
         font-size: 14px; }
-    /* line 141, ../scss/modules/_newUsers.scss */
+    /* line 142, ../scss/modules/_newUsers.scss */
     section.aboutUsPage a:hover span {
       color: #222; }
-      /* line 143, ../scss/modules/_newUsers.scss */
+      /* line 144, ../scss/modules/_newUsers.scss */
       section.aboutUsPage a:hover span.title {
         opacity: .5; }

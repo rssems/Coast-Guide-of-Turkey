@@ -1,0 +1,55 @@
+// scroll popup 
+.scrollPopup{
+    position: fixed;
+    z-index: 100;
+    bottom: 0;
+    right: -400px;
+	-webkit-transition: All 0.4s ease;
+	-moz-transition: All 0.4s ease;
+	-o-transition: All 0.4s ease;
+	-ms-transition: All 0.4s ease;
+	transition: All 0.4s ease;
+    &.active{
+	    right: 0;
+    }
+	.close{
+		position: absolute;
+		left: 5px;
+		top: 5px;
+		width: 30px;
+		height: 30px;
+		background-color: black;
+		border-radius: 15px;
+		&.orta{
+			left: -15px;
+			top: -15px;
+		}
+		&.dis{
+			left: -35px;
+			top: -35px;
+		}
+		span{
+			display: block;
+			margin-top: 7.5px;
+			margin-left: 7.5px;
+			@include background-image-retina('btn_close', 'png', 15px, 15px);
+			background-repeat:no-repeat;
+			width: 15px;
+			height: 15px;
+			@include transition;
+		}
+		opacity: 0.5;
+		&:hover{
+			opacity: 1;
+		}
+	}
+    .scrollPopup-Content{
+    	width: 350px;
+    	height: 250px;
+    	display: block;
+    	z-index: 1;
+    	a{
+    		display: block;
+    	}
+    }
+} 
