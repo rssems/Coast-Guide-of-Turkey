@@ -2311,6 +2311,7 @@ section.selection {
         overflow: visible; } }
     /* line 38, ../scss/modules/_selection-photos-popup.scss */
     .popup .popup-content .socialLinks {
+      z-index: 3;
       margin: 20px;
       opacity: 0;
       -webkit-transition: All 0.4s ease;
@@ -2318,14 +2319,14 @@ section.selection {
       -o-transition: All 0.4s ease;
       -ms-transition: All 0.4s ease;
       transition: All 0.4s ease; }
-    /* line 43, ../scss/modules/_selection-photos-popup.scss */
+    /* line 44, ../scss/modules/_selection-photos-popup.scss */
     .popup .popup-content:hover .socialLinks {
       opacity: 1; }
-    /* line 46, ../scss/modules/_selection-photos-popup.scss */
+    /* line 47, ../scss/modules/_selection-photos-popup.scss */
     .popup .popup-content .col-1-3 {
       padding: 20px; }
 
-/* line 51, ../scss/modules/_selection-photos-popup.scss */
+/* line 52, ../scss/modules/_selection-photos-popup.scss */
 .popup-overlay {
   position: absolute;
   z-index: 1;
@@ -2336,7 +2337,7 @@ section.selection {
   width: 100%;
   height: 100%;
   display: block; }
-  /* line 61, ../scss/modules/_selection-photos-popup.scss */
+  /* line 62, ../scss/modules/_selection-photos-popup.scss */
   .popup-overlay span {
     opacity: 0.5;
     cursor: pointer;
@@ -2361,11 +2362,11 @@ section.selection {
         -moz-background-size: 26px 26px;
         -o-background-size: 26px 26px;
         background-size: 26px 26px; } }
-    /* line 73, ../scss/modules/_selection-photos-popup.scss */
+    /* line 74, ../scss/modules/_selection-photos-popup.scss */
     .popup-overlay span:hover {
       opacity: 1; }
 
-/* line 78, ../scss/modules/_selection-photos-popup.scss */
+/* line 79, ../scss/modules/_selection-photos-popup.scss */
 .popup-content img.main-img {
   display: block;
   width: auto;
