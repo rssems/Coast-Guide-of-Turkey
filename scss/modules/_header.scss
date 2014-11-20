@@ -41,7 +41,7 @@ header{
 		margin: 20px 0 0 20px;
 		@include media-phone {
 			border:none;
-			display: none;
+			//display: none;
 		}
 		form{
 			position: relative;
@@ -202,7 +202,8 @@ header{
 .profile-menu{
 	display: block;
 	position: absolute;
-	bottom:-166px;
+	//bottom:-166px; //4lu icin
+	bottom:-125px;
 	right: 0;
 	width: 170px;
 	height: auto;

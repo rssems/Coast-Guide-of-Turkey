@@ -1,17 +1,13 @@
 // scroll popup 
 .scrollPopup{
     position: fixed;
-    z-index: 100;
+    z-index: 1000;
     bottom: 0;
-    right: -400px;
-	-webkit-transition: All 0.4s ease;
-	-moz-transition: All 0.4s ease;
-	-o-transition: All 0.4s ease;
-	-ms-transition: All 0.4s ease;
-	transition: All 0.4s ease;
-    &.active{
-	    right: 0;
-    }
+    right: 0;
+    display: none;
+    //&.active{
+	//    right: 0;
+    //}
 	.close{
 		position: absolute;
 		left: 5px;
@@ -20,6 +16,7 @@
 		height: 30px;
 		background-color: black;
 		border-radius: 15px;
+		cursor:pointer;
 		&.orta{
 			left: -15px;
 			top: -15px;
@@ -36,22 +33,23 @@
 			background-repeat:no-repeat;
 			width: 15px;
 			height: 15px;
-			@include transition;
+			//@include transition;
 			-webkit-background-size: 15px 15px;
 			-moz-background-size: 15px 15px;
 			-o-background-size: 15px 15px;
 			background-size: 15px 15px;
 		}
-		opacity: 0.5;
-		&:hover{
-			opacity: 1;
-		}
+		//opacity: 0.5;
+		//&:hover{
+		//	opacity: 1;
+		//}
 	}
     .scrollPopup-Content{
-    	width: 350px;
+    	width: 300px;
     	height: 250px;
     	display: block;
     	z-index: 1;
+    	overflow:hidden;
     	a{
     		display: block;
     	}

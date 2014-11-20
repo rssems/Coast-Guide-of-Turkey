@@ -25,6 +25,16 @@ section.coverPhoto{
 		display: block;
 		margin-top: -60px;
 	}
+	.panoramic{
+		margin-top: 340px;
+	}
+	.centerPanoramic {
+ 		position: absolute;
+    	top: 0; bottom:0; left: 0; right:0;
+    	margin: auto;
+    	//max-height: 400px;
+	}
+
 	.allPhotosLink{
 		display: block;
 		height: 38px;
@@ -50,8 +60,6 @@ section.coverPhoto{
 article.welcome2 p:first-of-type{
 			font-size: 14px!important;
 }
-
-
 
 section.info .grid{
 	padding-left: 90px;

@@ -1,2 +1,2 @@
-Coast-Guide-of-Turkey
+Coast-Guide-TR
 =====================

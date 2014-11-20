@@ -155,6 +155,12 @@ footer .copyright{
 
 footer .language{
 	float: right;
+	@media (min-width: 640px) { 
+		margin-right: 190px; 
+	}
+	@media (max-width: 640px) { 
+		margin-right: 20px; 
+	}
 	li {
 		float: left;
 		a{

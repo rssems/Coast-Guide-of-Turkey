@@ -62,8 +62,6 @@ code, kbd, pre, samp {
     font-family: $code-font;
 }
 
-.hidden {display:none;}
-
 /* COMMON SPRITE
    ============================================== */
 
@@ -104,4 +102,10 @@ code, kbd, pre, samp {
         @include retina-sprite(textFeedback, common);
         margin: 32px 0 0 17px;
     }
+}
+
+// Hidden
+.hidden {
+    display:none !important;
+    visibility: hidden !important;
 }
